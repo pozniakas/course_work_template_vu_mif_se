@@ -66,7 +66,7 @@ Vienas iš alternatyvių ir dar nespėjusių plačiai išpopuliarėti būdų suv
 
 1. Išanalizuoti tradicinius programinės įrangos išleidimo internetinėms programoms būdus.
 
-2. Apžvelgti laikinų aplinkų sprendimą tokio tipo programoms bei jų taikymo privalumus ir trūkumus.
+2. Apžvelgti laikinų aplinkų sprendimą tokio tipo programoms bei jo taikymą.
 
 % TODO: Pataisyti po trečiadienio meeto apie praktinį sprendimą
 3. Įgyvendinti praktinį sprendimą, kuriame būtų naudojamas laikinųjų aplinkų metodas, pateikiant eigą bei išvadas.
@@ -112,24 +112,24 @@ Kuriant programinę įrangą ir valdant jos leidimus susiformavo keli esminiai p
 
   \item \textit{Projektavimas}. Proceso metu bandoma suprojektuoti sistemos architektūrą, kuri vėliau yra patikrinama siekiant įsitikinti ar nėra nukrypimų nuo reikalavimų, turimų resursų bei produkto apimties \cite{SaltKetvirtas}. Suformuota architektūra leidžia iš anksto numatyti galimas problemas ir turėti stabiliai veikiančią sistemą išvengiant projektavimo bei optimizavimo klaidų atsiradus naujiems leidimams, kurie keičia sistemos veikimą. 
   
-  \item \textit{Implementacija}. Programinė įranga kuriama pagal suformuotus reikalavimus, kurie buvo paruošti ankstesniuose etapuose \cite{SaltPenktas}.  Autoriaus nuomone tai leidžia išvengti komunikacijos klaidų tarp klientų ir suinteresuotų šalių bei vykdytojų. O tai lemia, kad programinė įranga yra išleidžiama dažniau į produkcinę aplinką mažesniais komponentais arba vienetais, nes nėra reikalingas pilnai įgyvendintas funkcionalumas, kuris leistų įsitikinti, jog tai atitinka kliento poreikius.
+  \item \textit{Implementacija}. Programinė įranga kuriama pagal suformuotus reikalavimus, kurie buvo paruošti ankstesniuose etapuose \cite{SaltPenktas}.  Autoriaus nuomone tai leidžia išvengti komunikacijos klaidų tarp klientų ir suinteresuotų šalių bei vykdytojų. O tai lemia, kad programinė įranga yra išleidžiama dažniau į produkcinę aplinką mažesniais komponentais arba vienetais, nes nėra reikalingas pilnai įgyvendintas funkcionalumas, kuris leistų įsitikinti ar tai atitinka kliento poreikius.
   
   \item \textit{Verifikacija}. Šiam principui užtikrinti reikalinga testuotojų komanda, kuri prieš išleidžiant naujus funkcionalumus tikrina naujo kodo kokybę bei paruoštus funkcionalumus \cite{SaltKetvirtas}. Tai leidžia nustatyti, ar sistema yra paruošta naudotis klientams ir galima dislokuoti naują leidimą.
   
   \item \textit{Priežiūra}. Laikomasi principo, kad jei klientai susiduria su problemomis, kurios susijusios su teikiama programine įranga - jie gali apie jas pranešti atsakingiems asmenims ir gauti pagalbą siekiant jas išspręsti \cite{SaltKetvirtas}. Jei atrandamos problemos programinėje įrangoje - grįžtama į implementacijos etapą ir praėjus visus žingsnius yra paruošiamas naujas leidimas, kuris išsprendžia klientui atsiradusias problemas.
 \end{itemize}
 
-Griežta programinės įrangos išleidimo etapų struktūra leidžia užtikrinti, jog sistema veiktų tinkamai, nes tarp visų etapų dokumentai praeina kokybės patikrą, o juose saugoma tokia informacija kaip kliento reikalavimai, turimi resursai ar sistemos architektūra \cite{SaltKetvirtas}. Tačiau naudojant šį metodą visas procesas vyksta sinchroniškai, todėl nukenčia naujų funkcionalumų trukmė iki kol jie atsidurs produkcinėje aplinkoje. Krioklio metodas neišpildo visų internetinių programų poreikių, nes jis skirtas labiau programinei įrangai, kurios leidimai būna milžiniški ir yra išleidžiami vos kelis kartus per metus ar dar rečiau \cite{SaltTrecias}.
+Griežta programinės įrangos išleidimo etapų struktūra leidžia užtikrinti, kad sistema veiktų tinkamai, nes tarp visų etapų dokumentai praeina kokybės patikrą, o juose saugoma tokia informacija kaip kliento reikalavimai, turimi resursai ar sistemos architektūra \cite{SaltKetvirtas}. Tačiau naudojant šį metodą visas procesas vyksta sinchroniškai, todėl nukenčia naujų funkcionalumų trukmė iki kol jie atsidurs produkcinėje aplinkoje. Krioklio metodas neišpildo visų internetinių programų poreikių, nes jis skirtas labiau programinei įrangai, kurios leidimai būna milžiniški ir yra išleidžiami vos kelis kartus per metus ar dar rečiau \cite{SaltTrecias}.
 
 % TODO: PĮ įtraukti į Santrumpas
 % TODO: Sužiūrėti visur angliškų lietuviškų žodžių reikšmes(Pvz.: ar Iteracija = Sprint)
 \subsection{„Agile“ principai PĮ išleidimo valdyme}
 
-Šios metodikos pagrindinės idėjos plačiai naudojamos įvairiose IT srityse - ne išimtis ir programinės įrangos išleidimo valdyme. Autoriaus nuomone „Agile“ principai yra sunkiai išvengiami įmonėms, norinčioms užtikrinti stabilų funkcionalumų pristatymą, nuolatinį testavimą ir lankstumą keistis. PĮ leidimų valdyme ši metodika gali būti taikoma produktų leidimų kūrimui, testavimui ir diegimui valdyti. Tai apima kūrimo proceso padalijimą į mažesnius, iteracijų (angl. \textit{Sprint}) ciklus, kurie leidžia geriau planuoti mažus leidimus. „Agile“ taip pat išpildo ir prieš tai aptartų pagrindinių principų idėją, jog reikia glaudžiai bendradarbiauti su suinteresuotosiomis šalimis, kad būtų nustatyti funkcijų prioritetai ir prireikus būtų atliekamos korekcijos, daugiausia dėmesio skiriant tam, kad vertė būtų kuo greičiau pristatyta galutiniam vartotojui išvengiant klaidų procesų eigoje \cite{SaltTrecias}. Nors visos šios taisyklės labiau orientuojasi į pačio darbo planavimą nei, kad programinio kodo išleidimą į produkcinę aplinką - įtaka yra neišvengiama, nes leidimo pristatymas labai priklauso nuo to, kaip tas leidimas buvo prižiūrimas iki šios stadijos.
+Šios metodikos pagrindinės idėjos plačiai naudojamos įvairiose IT srityse - ne išimtis ir programinės įrangos išleidimo valdyme. Autoriaus nuomone „Agile“ principai yra sunkiai išvengiami įmonėms, norinčioms užtikrinti stabilų funkcionalumų pristatymą, nuolatinį testavimą ir lankstumą keistis. PĮ leidimų valdyme ši metodika gali būti taikoma produktų leidimų kūrimui, testavimui ir diegimui valdyti. Tai apima kūrimo proceso padalijimą į mažesnius, iteracijų (angl. \textit{Sprint}) ciklus, kurie leidžia geriau planuoti mažus leidimus. „Agile“ taip pat išpildo ir prieš tai aptartų pagrindinių principų idėją, kad reikia glaudžiai bendradarbiauti su suinteresuotosiomis šalimis, kadangi reikia nustatyti funkcijų prioritetus ir prireikus atlikti korekcijas, daugiausia dėmesio skiriant tam, kad vertė būtų kuo greičiau pristatyta galutiniam vartotojui išvengiant klaidų procesų eigoje \cite{SaltTrecias}. Nors visos šios taisyklės labiau orientuojasi į pačio darbo planavimą nei, kad programinio kodo išleidimą į produkcinę aplinką - įtaka yra neišvengiama, nes leidimo pristatymas labai priklauso nuo to, kaip tas leidimas buvo prižiūrimas iki šios stadijos.
 
 \subsection{„Lean“ metodika siekiant supaprastinti procesus}
 
-Jei „Agile“ metodikos tikslas yra labiau užtikrinti, jog sistema veiktų tinkamai, tai „Lean“ metodikos principai dar labiau išplečia programinės įrangos kūrimo teorinius pagrindus ir siekia, kad būtų kuo mažiau kompleksiškumo bei leidimai produkcinę aplinką pasiektų greičiau \cite{SaltSestas}. Norint išvengti situacijų, kai įmonėse yra procesai vykdomi tik dėl to, nes taip yra numatyta, su šiuo metodu darbą siekiama pradėti tik tada, kai to reikia. Pagrindinė „Lean“ vertybė yra vertės suteikimas klientui išleidžiant jų poreikius atitinkančią programinę įrangą ir tai daryti pašalinant kliūtis bei sutrumpinant funkcionalumų pristatymo laiką. Tai ir yra esminiai skirtumai nuo principų, apie kuriuos šneka „Agile“ metodas. Bet taip pat, autoriaus nuomone, svarbu laikantis šių taisyklių neatsisakyti visko, ką suteikia „Agile“, nes PĮ kūrime aiškios sistemos nebuvimas suteikia dar daugiau neapibrėžtumo ir situacijų, kuomet produkto leidimai kliento nepasiekia laiku.
+Jei „Agile“ metodikos tikslas yra labiau užtikrinti, kad sistema veiktų tinkamai, tai „Lean“ metodikos principai dar labiau išplečia programinės įrangos kūrimo teorinius pagrindus ir siekia kuo mažesnio kompleksiškumo ir kad leidimai produkcinę aplinką pasiektų greičiau \cite{SaltSestas}. Norint išvengti situacijų, kai įmonėse yra procesai vykdomi tik dėl to, nes taip yra numatyta, su šiuo metodu darbą siekiama pradėti tik tada, kai to reikia. Pagrindinė „Lean“ vertybė yra vertės suteikimas klientui išleidžiant jų poreikius atitinkančią programinę įrangą ir tai daryti pašalinant kliūtis bei sutrumpinant funkcionalumų pristatymo laiką. Tai ir yra esminiai skirtumai nuo principų, apie kuriuos šneka „Agile“ metodas. Bet taip pat, autoriaus nuomone, svarbu laikantis šių taisyklių neatsisakyti visko, ką suteikia „Agile“, nes PĮ kūrime aiškios sistemos nebuvimas suteikia dar daugiau neapibrėžtumo ir situacijų, kuomet produkto leidimai kliento nepasiekia laiku.
 
 \begin{figure}[H]
     \centering
@@ -140,12 +140,13 @@ Jei „Agile“ metodikos tikslas yra labiau užtikrinti, jog sistema veiktų ti
 
 \subsection{Išleidimų automatizacija}
 
-Prieš tai aprašytos metodikos suteikia galimybes pagerinti leidimų pristatymo kokybę bei kokiu greičiu jie pasiekia produkcinę aplinką, bet tai virsta realybe tik tuo metu, jei viskas yra įgyvendinama idealiai, procesų eiga nekinta arba kinta neženkliai. Todėl, norint išvengti žmogiškųjų klaidų, kurios gali lemti dideles nesėkmes išleidimo valdyme - autoriaus nuomone tikslas turėtų būti procesų automatizavime, kurie tiksliai apibrėžtų įvykių seka bei veiksmus, kuriuos bus siekiama automatizuoti. Tai sutaupo ne tik laiko resursus, kadangi reikalinga mažesnė priežiūra iš sistemos administratorių, bet ir sprendžia prieš tai aprašytą problemą, jog kiekvieną kartą įvykus tam pačiam scenarijui bus vykdomi tie patys aprašyti žingsniai ir nėra žmogiškojo faktoriaus.
+Prieš tai aprašytos metodikos suteikia galimybes pagerinti leidimų pristatymo kokybę bei kokiu greičiu jie pasiekia produkcinę aplinką, bet tai virsta realybe tik tuo metu, jei viskas yra įgyvendinama idealiai, procesų eiga nekinta arba kinta neženkliai. Todėl, norint išvengti žmogiškųjų klaidų, kurios gali lemti dideles nesėkmes išleidimo valdyme - autoriaus nuomone tikslas turėtų būti procesų automatizavime, kurie tiksliai apibrėžtų įvykių seka bei veiksmus, kuriuos bus siekiama automatizuoti. Tai sutaupo ne tik laiko resursus, kadangi reikalinga mažesnė priežiūra iš sistemos administratorių, bet ir sprendžia prieš tai aprašytą problemą, kad kiekvieną kartą įvykus tam pačiam scenarijui bus vykdomi tie patys aprašyti žingsniai ir nėra žmogiškojo faktoriaus.
 
     \subsubsection{„DevOps“ pozicijos svarba leidimų valdyme}
 
 % TODO: Citatą į išnašas
-Neegzistuojant įmonėje „DevOps“ tipo IT specialistams nemažai klasikinei sistemos administratoriaus pozicijai tenka jiems nepriklausančių pareigų. Kadangi tinkamų įrankių automatizacijai trūkumas, žmogiškų klaidų didelis skaičius bei prasta komunikacija tarp komandų buvo sprendžiama ne su tos profesijos žmonėmis. Tai įvyksta dėl susiformavusio supratimo, kad tai sistemos administratorių pareiga automatizuoti programinės įrangos leidimus, testų patikras ir kitas reikalingas veiklas \cite{SaltTrecias}. Dėl šios priežasties ir atsirado pozicija - „DevOps“. Siekiant išspręsti išvardintas problemas „DevOps“ inžinierius visapusiškai siekia dalyvauti programinės įrangos kūrimo cikle bei spręsti komunikacijos problemas, kurios dažnai kyla tradiciniame leidimų valdyme. Tuomet šią poziciją užimantis asmuo ieško būdu automatizuoti kodo paruošimo, testavimo ir išleidimo veiklas derinant poreikius reikalingus tiek programuotojams, tiek sistemos administratoriams. Autoriaus nuomone tai leidžia sėkmingai atskirti programuotojų bei sistemos administratorių veiklas ir skirti didesnį dėmesį programinės įrangos išleidimo valdymui.
+
+Sistemos administratoriams tenka nepriklausančių jiems pareigų, kai dirba įmonėse, kurio neturi „DevOps“ tipo IT specialistų. Kadangi tinkamų įrankių automatizacijai trūkumas, didelis žmogiškųjų klaidų skaičius bei prasta komunikacija tarp komandų buvo sprendžiama ne su tos profesijos žmonėmis. Visi šie nesusipratimai įvyksta dėl susiformavusio požiūrio, kad tai sistemos administratorių pareiga automatizuoti programinės įrangos leidimus, testų patikras ir kitas reikalingas veiklas \cite{SaltTrecias}. Dėl šios priežasties ir atsirado pozicija - „DevOps“. Siekiant išspręsti išvardintas problemas šis inžinierius visapusiškai siekia dalyvauti programinės įrangos kūrimo cikle bei spręsti komunikacijos problemas, kurios dažnai kyla tradiciniame leidimų valdyme. Tuomet šią poziciją užimantis asmuo ieško būdų automatizuoti kodo paruošimo, testavimo ir išleidimo veiklas derinant poreikius reikalingus tiek programuotojams, tiek sistemos administratoriams. Autoriaus nuomone tai leidžia sėkmingai atskirti programuotojų bei sistemos administratorių veiklas ir skirti didesnį dėmesį programinės įrangos išleidimo valdymui.
 
 \begin{figure}[H]
     \centering
@@ -199,7 +200,7 @@ Tuo tarpu „GitLab Flow“ irgi yra paprastesnė „GitFlow“ alternatyva, tik
     % TODO: Suinteresuotos šalys - įdėti į sąvokas
   \item \textit{Staging}. Šaka į kurią yra suliejamos naujų funkcionalumų ar klaidų taisymo šakos. Joje esantis kodas automatinių procesų pagalba visada yra atnaujinimas su kiekvienu suliejimu ir įdiegiamas į stabilią, bet ne produkcinę aplinką (ji paprastai yra pasiekiama tik užsakovams, programuotojams ir produktą integruojančioms kitoms įmonėms).
   
-  \item \textit{Production}. Kai nusprendžiama, kad stabilioje aplinkoje esantis kodas yra tinkamas - jis suliejamas iš „Staging“ šakos į šią. Tuomet lygiai taip pat - automatiniai procesai užtikrina, jog naujas diegimas pasiektų produkcinę aplinką, kuria jau naudojasi patys vartotojai.
+  \item \textit{Production}. Kai nusprendžiama, kad stabilioje aplinkoje esantis kodas yra tinkamas - jis suliejamas iš „Staging“ šakos į šią. Tuomet lygiai taip pat - automatiniai procesai užtikrina, kad naujas diegimas pasiektų produkcinę aplinką, kuria jau naudojasi patys vartotojai.
 
 \end{itemize}
 
@@ -260,7 +261,7 @@ Tarp pagrindinių šiame darbe aptartų šakojimosi metodų - „GitFlow“ yra 
 
   \item \textit{Leidimo šakų atsisakymas ir jų pakeitimas laikinosiomis aplinkomis}. Vienas iš labiausiai kompleksiškumą sukuriančių šakų tipų yra „Release“, nes šios šakos yra reikalingos tik laikinam laiko periodui, kol yra nusprendžiama kodą sulieti su pagrindine produkcinės aplinkos kodo baze arba leidimas tampa pasenęs ir nebereikalingas. Todėl statinių šakų atsisakymas ir laikinų aplinkų naudojimas su kiekvienu kodo sujungimo prašymu (angl. \textit{Merge Request}) iš „Development“ tipo aplinkos į „Production“, leistų turėti identifikuotus leidimus bei neturėti pastovių aplinkų laikinumu pasižyminčiam komponentui.
   
-  \item \textit{„Hotfixes“ šakų laikinosios aplinkos}. Vienas iš didžiausių trūkumų su greitų problemų sutvarkymo šakomis yra neturėjimas tarpinės erdvės, kurioje kodas būtų patestuojamas, nes yra reikalingas skubus problemos sprendimas. Tačiau laikinosios aplinkos pasižymi tuo, kad jos nereikalauja jokių papildomų pastangų. Dėl šios priežasties „Hotfixes“ šakos galėtų būti testuojamos pasitelkiant jas, taip užtikrinant, jog kodas patekęs į produkcinę aplinką veiks tinkamai.
+  \item \textit{„Hotfixes“ šakų laikinosios aplinkos}. Vienas iš didžiausių trūkumų su greitų problemų sutvarkymo šakomis yra neturėjimas tarpinės erdvės, kurioje kodas būtų patestuojamas, nes yra reikalingas skubus problemos sprendimas. Tačiau laikinosios aplinkos pasižymi tuo, kad jos nereikalauja jokių papildomų pastangų. Dėl šios priežasties „Hotfixes“ šakos galėtų būti testuojamos pasitelkiant jas, taip užtikrinant, kad kodas patekęs į produkcinę aplinką veiks tinkamai.
 
 \end{itemize}
 
@@ -269,13 +270,29 @@ Kiti du šiame darbe aptarti metodai yra „GitHub Flow“ ir „GitLab Flow“.
 Tačiau „Trunk-based development“ metodas išvis neturi jokių papildomų šakų ir visas kodas yra parašytas bei rašomas vienoje pagrindinėje aplinkoje, dar kitaip vadinamoje kamienu (angl. \textit{trunk}). Vienintelis laikinųjų aplinkų panaudojimo būdas - sukurti automatizuotą sprendimą, kuris paruoštų aplinką konkrečiam pakeitimų įrašui (angl. \textit{commit}), kadangi šis metodas stokoja atskirtos kodo bazės tarp skirtingų funkcionalumų.
 
 
-\subsection{Kylančios rizikos}
+\subsection{Būdai integruoti metodiką}
 
-Tekstas
+Įmonėms norinčioms integruoti laikinųjų aplinkų metodiką reikia pasirinkti iš dviejų galimų būdų tai padaryti:
+
+\begin{itemize}
+  \item \textit{„EaaS“ tipo įrankių integracija su automatiniais procesais}. Paprastesnis yra šis metodas, kuris siūlo naudoti debesų kompiuterijos paslaugas, turinčias iš anksto paruoštą konfigūraciją ir reikalauja tik esminių detalių apie kuriamo produkto konteinerizuotas programas, kad būtų suteikta informacija kokiu būdu ir su kokiais poreikiais programinė įranga gali būti sėkmingai paruošta paslaugas suteikiančių kompanijų serveriuose. Tuomet seka integracija su įrankiais skirtais automatizuoti programinės įrangos procesus (tokie kaip „Github Actions“ ar „GitLab CI/CD“). Kiekvienas „EaaS“ sprendimas turi savo paleidimo būdus kaip paruošti, kad mūsų kiekviena nauja kodo sujungimo užklausa automatiškai paruoštų naują laikinąją aplinką.
+
+  \item \textit{Savarankiškai paruoštas sprendimas}. Egzistuoja įvarių priežasčių dėl kurių įmonėms gali netikti jau egzistuojantys „EaaS“ tipo įrankiai - teisiniai reguliavimai, duomenų saugumas ir kiti. Šiuo atveju yra kuriamas sprendimas su įvairiais konteinerių orchestravimo įrankiais kaip „Kubernetes“, kai patys „DevOps“ specialistai ruošia automatizuotus procesus, kurie su kiekviena nauja kodo sujungimo užklausa ruošia laikinąją aplinką jų pačių debesų klasteriuose (angl. \textit{Cloud clusters}).
+
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{img/PvzBuduv2.png}
+    \caption{Integruoto laikinųjų aplinkų sprendimo pavyzdys}
+    \label{img:mlp}
+\end{figure}
 
 \subsection{Apibendrinimas}
 
-Tekstas
+Laikinųjų aplinkų metodas papildo daugelį strategijų naudojamų programinės įrangos išleidimo valdymui internetinėms programoms. Pati metodika yra paremta debesų kompiuterijos paslaugos „EaaS“ principu, kai visa IT infrastruktūra yra sukonfigūruota iš anksto ir kiekvienam scenarijui, kai reikalingos laikinosios aplinkos, nebereikia rūpintis kaip debesų serveriuose programa bus paruošta naudojimui. Šis sprendimas išsiskiria tuo, kad yra priešingybė tradicinėms statinėms aplinkoms, nes veikia emferiškai, dinamiškai prisitaiko prie kodo pakeitimų. Kadangi nėra daug empirinių tyrimų, nustatančių ar laikinųjų aplinkų strategija padeda pagerinti procesus - svarbu šiame darbe integruoti šią strategiją, kad būtų galima palyginti tradicinius programinės išleidimo valdymus su šiuo.
+
+% Internetinių programų leidimams įtaką daro praktiškai visi su produkto ruošimu susiję procesai - planavimas, implementacija ir kiti žingsniai, bet daugiausiai įtakos turi išleidimo valdymo būdai. Apžvelgus šias skirtingas metodikas suvaldyti programinės įrangos leidimus internetinės svetainėms, galima daryti išvadą, kad egzistuojantys sprendimai leidžia užtikrinti įmonėms reikiamą saugumą ar greitį iki kol leidimai pasiekia produkcinę aplinką. Tačiau susiduriama ir su problemomis, kai pasirinkus saugų metodą nukenčia efektyvumas dėl metodo kompleksiškumo bei atvirkščiai. Laikinųjų aplinkų metodas dėl savo neįprastos specifikos turi perspektyvos suderinti šiuos abu dalykus. 
 
 % Galimas skyrius apie egzistuojančius toolsus at the moment
 
@@ -338,3 +355,5 @@ Aprašyti ką su šia tema reikėtų daryti toliau
 \end{table}
 
 \end{document}
+
+% TODO: Perdaryti pav i lenteles
