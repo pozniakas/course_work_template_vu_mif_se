@@ -276,15 +276,15 @@ Aplikacijai sėkmingai veikiant reikia paruošti konteinerizuotas programas, kad
 \begin{enumerate}
   \item Importuojamas oficialus „Node“ 16 versijos atvaizdas.
   \item Pasirenkama darbo direktoriją kuriamame atvaizde.
-  \item Įkopijuojami konfigūracijos failai, kurie aprašo kokie paketai yra reikalingi.
+  \item Įklijuojami konfigūracijos failai, kurie aprašo kokie paketai yra reikalingi.
   \item Įrašomi reikalingi paketai pagal konfigūraciją.
-  \item Įkopijuojamas likęs programinis kodas.
+  \item Įklijuojamas likęs programinis kodas.
   \item Nurodoma atvaizdo paleidimo metu naudojama komanda, kuri pradeda vykdyti programinį kodą.
 \end{enumerate}
 
 Sukompiliuoti abiejų komponentų atvaizdai gali būti sėkmingai naudojami produkcinėje aplinkoje arba laikinosiose aplinkose.
 
-\subsection{Laikinųjų aplinkų integracija}
+\subsection{Laikinųjų aplinkų paruošimas naudojimui}
 
 Su parašytu kodu bei paruoštomis konteinerių konfigūracijomis, ši programa turi esmines dalis, reikalingas programinės įrangos išleidimo valdymui. Tačiau norint turėti laikinąsias aplinkas su kiekviena šakos sujungimo užklausia reikia papildomai atlikti keletą žingsnių.
 
@@ -293,9 +293,9 @@ Su parašytu kodu bei paruoštomis konteinerių konfigūracijomis, ši programa 
 „Uffizzi“ įrankis įvertinant skirtingus įmonių poreikius suteikia du skirtingus būdus integruoti savo produktą \cite{SaltKeturioliktas}:
 
 \begin{itemize}
-  \item \textit{Integracija su „Github Actions“}. Šis sprendimas yra naudojamas, kai programinė įranga jau iš seniau turi savo programinės įrangos išleidimo valdymą bei paruoštus automatinius „Github Actions“ procesys, kurie ruošia „Docker“ atvaizdus bei juos talpina į atitinkamus registurs. Tokiu atveju nėra atsisakoma šių procesų, o tik papildomi procesai integruojant „Uffizzi“ įrankį.
+  \item \textit{Integracija su „Github Actions“}. Šis sprendimas yra naudojamas, kai programinė įranga jau iš seniau turi savo programinės įrangos išleidimo valdymą bei paruoštus automatinius „Github Actions“ procesus, kurie ruošia „Docker“ atvaizdus bei juos talpina į atitinkamus registrus. Tokiu atveju nėra atsisakoma šių procesų, o tik papildomi procesai integruojant „Uffizzi“ įrankį.
 
-  \item \textit{Integracija su „Uffizzi CI“}. Produktui neturint jokio suformuoto išleidimo valdymo yra rekomenduojama naudoti šį būdą. Taip išvengiama automatizuotų procesų apsirašymo patiems „DevOps“ inžinieriais ir yra reikalinga tik „Docker Compose“ tipo konfiguracija, kuri apibrėžia mūsų programos komponentų poreikius.
+  \item \textit{Integracija su „Uffizzi CI“}. Produktui neturint jokio suformuoto išleidimo valdymo yra rekomenduojama naudoti šį būdą. Taip išvengiama automatizuotų procesų apsirašymo patiems „DevOps“ inžinieriais ir yra reikalinga tik „Docker Compose“ tipo konfigūracija, kuri apibrėžia mūsų programos komponentų poreikius.
 
 
 \end{itemize}
@@ -303,7 +303,7 @@ Su parašytu kodu bei paruoštomis konteinerių konfigūracijomis, ši programa 
 Kadangi šio darbo imitacinė interneto svetainė dar neturi įgyvendintų automatizuotų procesų susijusių su išleidimu bei diegimu, integracija vyks naudojant „Uffizzi CI“.
     \subsubsection{Konfigūracija ir pasiruošimas integracijai}
 
-Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda iš reikalingų atvaizdų paruošimo parametrų bei nustatymų apie laikinųjų aplinkų gyvavimo ciklą ir trukmę \cite{SaltKeturioliktas}. Pagal parašytą programinį kodą (žr. \hyperref[priedas1]{1} ir \hyperref[priedas2]{2} priedus) - nėra reikalingi jokie aplinkų kintamieji (angl. \textit{environment variables}), tik nurodytas reikalingas prievdas (angl. \textit{port}) bei kur rasti „Dockerfile“ tipo failą. Tuomet darbe nurodomi laikinųjų aplinkų parametrai:
+Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda iš reikalingų atvaizdų paruošimo parametrų bei nustatymų apie laikinųjų aplinkų gyvavimo ciklą ir trukmę \cite{SaltKeturioliktas}. Pagal parašytą programinį kodą (žr. \hyperref[priedas1]{1} ir \hyperref[priedas2]{2} priedus) - nėra reikalingi jokie aplinkų kintamieji (angl. \textit{environment variables}), tik nurodytas reikalingas prievadas (angl. \textit{port}) bei kur rasti „Dockerfile“ tipo failą. Tuomet darbe nurodomi laikinųjų aplinkų parametrai:
 
 \begin{itemize}
   \item Diegti laikinąją aplinką, kai kodo sujungimo užklausa atidaroma - laikinoji aplinka automatiškai paruošiama.
@@ -314,17 +314,24 @@ Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda
   
 \end{itemize}
 
-Tačiau „Uffizzi“ sprendimas suteikia tik vieną domeną visai aplinkai, todėl reikalingas apkrovos išlygintuvas (angl. \textit{load balancer}), kuris pagal užklausą nukreipia į atitinkamą komponentą - arba kliento pusės aplikaciją, arba serverį. Panaudojus populiaraus apkrovos išlygintuvo įrankio „Nginx“ oficialų „Docker“ atvaizdą paruošiamas „Dockerfile“ tipo failas, kuriame įkeliama konfigūracija apibrėžianti kur kokios užklausos turėtų būti nukreipiamos (žr. \hyperref[priedas4]{4 priedą}). 
+Tačiau „Uffizzi“ sprendimas suteikia tik vieną domeną visai aplinkai, todėl reikalingas apkrovos išlygintuvas (angl. \textit{load balancer}), kuris pagal užklausą nukreipia į atitinkamą komponentą - arba kliento pusės aplikaciją, arba serverį. Panaudojus populiaraus apkrovos išlygintuvo įrankio „Nginx“ oficialų „Docker“ atvaizdą paruošiamas „Dockerfile“ tipo failas, kuriame įkeliama konfigūracija apibrėžianti kur kokios užklausos turėtų būti nukreipiamos (žr. \hyperref[priedas5]{5 priedą}). 
 
-Galiausiai baigiama pagrindininė konfiguracija pridėjus apkrovos išlygintuvą ir nurodžius, kad laikinosios aplinkos domenas bus nukreiptas į jį.
+Galiausiai baigiama pagrindinė konfigūracija pridėjus apkrovos išlygintuvą ir nurodžius, kad laikinosios aplinkos domenas bus nukreiptas į jį (žr. \hyperref[priedas4]{5 priedą}).
 
-    \subsubsection{„Github Actions“ automatizuoti procesai}
+    \subsubsection{„Uffizzi CI“ prijungimas}
 
-Tekstas
+Įvardintus mūsų programinės įrangos poreikius laikinosiose aplinkose belieka tik duoti leidimą „Uffizzi CI“ įrankiui priėjimą prie produkto repozitorijos bei nurodyti konfigūracijos failo vietą. Sulig šiais veiksmais ne ilgiau nei po 5 minuičų kiekviena kodo sujungimo užklausa gauna nuorodą į veikiančią laikinąją aplinką (žr. \hyperref[priedas6]{6 priedą}). Taip pat, suteikiama galimybė per „Uffizzi CI“ platformą stebėti kiekvieno atvaizdo žurnalus (angl. \textit{logs}), stebėti kiekvieno komponento būseną ir klaidas, jei tokios nutiko. Visa tai įmanoma dėl prižiūrėtų automatinių procesų ir „EaaS“ metodikos, kuri suteikia reikiamą IT infrastruktūrą be jokių papildomų klientų pastangų.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.55]{img/Veikimas.png}
+    \caption{Įgyvendinto „Uffizzi CI“ laikinųjų aplinkų sprendimo schema}
+    \label{img:mlp}
+\end{figure}
 
 \subsection{Apibendrinimas}
 
-Tekstas
+Imituotai internetinei programai pavyko pritaikyti vieną iš rekomenduojamų laikinųjų aplinkų sprendimą, kuris nereikalavo iš anksto paruošto programinės įrangos išleidimo su registrais paruoštiems atvaizdams. Kodo sujungimo užklausos tapo paprasčiau peržiūrimos, nes nėra reikalingi rankiniai žingsniai tam pasiekti. Taip pat įrankis suteikė „DevOps“ inžinieriams patogius įrankius stebėti šiuo metu veikiančias laikinąsias aplinkas. Tačiau netgi ir jau iš anksčiau naudojant tradicinį programinės įrangos išleidimo valdymą, šį sprendimą galimą pritaikyti pagal poreikius, nes konfigūracija suteikia pakankamai parametrų tam apibrėžti.
 
 \sectionnonum{Rezultatai ir išvados}
 Rezultatų ir išvadų dalyje turi būti aiškiai išdėstomi pagrindiniai darbo
@@ -398,6 +405,15 @@ Aprašyti ką su šia tema reikėtų daryti toliau
     \centering
     \includegraphics[scale=0.7]{img/priedai/compose.png}
     \caption{Laikinųjų aplinkų konfiguracija}
+    \label{img:mlp}
+\end{figure}
+
+\section{Ekrano nuotrauka rodanti laikinųjų aplinkų veikimą}
+\label{priedas6}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{img/Final.png}
+    \caption{Ekrano nuotrauka rodanti laikinųjų aplinkų veikimą}
     \label{img:mlp}
 \end{figure}
 
