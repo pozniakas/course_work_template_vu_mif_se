@@ -72,7 +72,6 @@ Kuriant programinę įrangą ir valdant jos leidimus, susiformavo keli esminiai 
 Šis metodas yra taip pavadintas, kadangi jo veikimo principo pavaizdavimas yra paremtas tradiciniais pramoniniais vamzdynais, kur viskas vyksta aiškiai apibrėžtais etapais ir eiliškumu \cite{SaltTrecias}. Kiekvienas iš šio metodo etapų atitinka konkretų principą susiformavusį IT sektoriuje:
 
 \begin{itemize}
-    % TODO: Suinteresuotos šalys - įdėti į sąvokas
   \item \textit{Reikalavimai}. Svarbu gauti tikslius poreikius iš klientų ir kitų suinteresuotų šalių (išlaikant pakankamai aukštą abstrakcijos lygį, kad būtų galima juos tobulinti sekančiuose Krioklio metodo etapuose). Formuojant reikalavimus taip pat atsižvelgiama į turimus resursus bei ar dokumentuoti reikalavimai atitinka verslo strategiją \cite{SaltKetvirtas}. Taip yra užtikrinama, kad kliento lūkesčiai ir verslo kryptis bus teisinga, kai kiekvienas iš poreikių bus tiksliai suformuluotas bei įgyvendintas. Iš anksto apsisaugojus nuo galimų nesusipratimų tarp užsakovo ir vykdytojo yra išvengiama dalies problemų, kurios atsirastų naujam leidimui patekus į produkcinę aplinką.
 
   \item \textit{Projektavimas}. Proceso metu bandoma suprojektuoti sistemos architektūrą, kuri vėliau yra patikrinama siekiant įsitikinti ar nėra nukrypimų nuo reikalavimų, turimų resursų bei produkto apimties \cite{SaltKetvirtas}. Suformuota architektūra leidžia iš anksto numatyti galimas problemas ir turėti stabiliai veikiančią sistemą išvengiant projektavimo bei optimizavimo klaidų atsiradus naujiems leidimams, kurie keičia sistemos veikimą. 
@@ -86,22 +85,31 @@ Kuriant programinę įrangą ir valdant jos leidimus, susiformavo keli esminiai 
 
 Griežta programinės įrangos išleidimo etapų struktūra leidžia užtikrinti, kad sistema veiktų tinkamai, nes tarp visų etapų dokumentai praeina kokybės patikrą, o juose saugoma tokia informacija kaip kliento reikalavimai, turimi resursai ar sistemos architektūra \cite{SaltKetvirtas}. Tačiau naudojant šį metodą visas procesas vyksta sinchroniškai, todėl nukenčia naujų funkcionalumų trukmė iki kol jie atsidurs produkcinėje aplinkoje. Krioklio metodas neišpildo visų internetinių programų poreikių, nes jis skirtas labiau programinei įrangai, kurios leidimai būna milžiniški ir yra išleidžiami vos kelis kartus per metus ar dar rečiau \cite{SaltTrecias}.
 
-% TODO: PĮ įtraukti į Santrumpas
-% TODO: Sužiūrėti visur angliškų lietuviškų žodžių reikšmes(Pvz.: ar Iteracija = Sprint)
-\subsection{„Agile“ principai PĮ išleidimo valdyme}
+\subsection{„Agile“ principai išleidimo valdyme}
 
-Šios metodikos pagrindinės idėjos plačiai naudojamos įvairiose IT srityse - ne išimtis ir programinės įrangos išleidimo valdyme. Autoriaus nuomone „Agile“ principai yra sunkiai išvengiami įmonėms, norinčioms užtikrinti stabilų funkcionalumų pristatymą, nuolatinį testavimą ir lankstumą keistis. PĮ leidimų valdyme ši metodika gali būti taikoma produktų leidimų kūrimui, testavimui ir diegimui valdyti. Tai apima kūrimo proceso padalijimą į mažesnius, iteracijų (angl. \textit{Sprint}) ciklus, kurie leidžia geriau planuoti mažus leidimus. „Agile“ taip pat išpildo ir prieš tai aptartų pagrindinių principų idėją, kad reikia glaudžiai bendradarbiauti su suinteresuotosiomis šalimis, kadangi reikia nustatyti funkcijų prioritetus ir prireikus atlikti korekcijas, daugiausia dėmesio skiriant tam, kad vertė būtų kuo greičiau pristatyta galutiniam vartotojui išvengiant klaidų procesų eigoje \cite{SaltTrecias}. Nors visos šios taisyklės labiau orientuojasi į pačio darbo planavimą nei, kad programinio kodo išleidimą į produkcinę aplinką - įtaka yra neišvengiama, nes leidimo pristatymas labai priklauso nuo to, kaip tas leidimas buvo prižiūrimas iki šios stadijos.
+Šios metodikos pagrindinės idėjos plačiai naudojamos įvairiose IT srityse - ne išimtis ir programinės įrangos išleidimo valdyme. Autoriaus nuomone „Agile“ principai yra sunkiai išvengiami įmonėms, norinčioms užtikrinti stabilų funkcionalumų pristatymą, nuolatinį testavimą ir lankstumą keistis. Programinės įrangos leidimų valdyme ši metodika gali būti taikoma produktų leidimų kūrimui, testavimui ir diegimui valdyti. Tai apima kūrimo proceso padalijimą į mažesnius, iteracijų (angl. \textit{Sprint}) ciklus, kurie leidžia geriau planuoti mažus leidimus. „Agile“ taip pat išpildo ir prieš tai aptartų pagrindinių principų idėją, kad reikia glaudžiai bendradarbiauti su suinteresuotosiomis šalimis, kadangi reikia nustatyti funkcijų prioritetus ir prireikus atlikti korekcijas, daugiausia dėmesio skiriant tam, kad vertė būtų kuo greičiau pristatyta galutiniam vartotojui išvengiant klaidų procesų eigoje \cite{SaltTrecias}. Nors visos šios taisyklės labiau orientuojasi į pačio darbo planavimą nei, kad programinio kodo išleidimą į produkcinę aplinką - įtaka yra neišvengiama, nes leidimo pristatymas labai priklauso nuo to, kaip tas leidimas buvo prižiūrimas iki šios stadijos.
 
 \subsection{„Lean“ metodika siekiant supaprastinti procesus}
 
-Jei „Agile“ metodikos tikslas yra labiau užtikrinti, kad sistema veiktų tinkamai, tai „Lean“ metodikos principai dar labiau išplečia programinės įrangos kūrimo teorinius pagrindus ir siekia kuo mažesnio kompleksiškumo ir kad leidimai produkcinę aplinką pasiektų greičiau \cite{SaltSestas}. Norint išvengti situacijų, kai įmonėse yra procesai vykdomi tik dėl to, nes taip yra numatyta, su šiuo metodu darbą siekiama pradėti tik tada, kai to reikia. Pagrindinė „Lean“ vertybė yra vertės suteikimas klientui išleidžiant jų poreikius atitinkančią programinę įrangą ir tai daryti pašalinant kliūtis bei sutrumpinant funkcionalumų pristatymo laiką. Tai ir yra esminiai skirtumai nuo principų, apie kuriuos šneka „Agile“ metodas. Bet taip pat, autoriaus nuomone, svarbu laikantis šių taisyklių neatsisakyti visko, ką suteikia „Agile“, nes PĮ kūrime aiškios sistemos nebuvimas suteikia dar daugiau neapibrėžtumo ir situacijų, kuomet produkto leidimai kliento nepasiekia laiku.
+Jei „Agile“ metodikos tikslas yra labiau užtikrinti, kad sistema veiktų tinkamai, tai „Lean“ metodikos principai dar labiau išplečia programinės įrangos kūrimo teorinius pagrindus ir siekia kuo mažesnio kompleksiškumo ir kad leidimai produkcinę aplinką pasiektų greičiau \cite{SaltSestas}. Norint išvengti situacijų, kai įmonėse yra procesai vykdomi tik dėl to, nes taip yra numatyta, su šiuo metodu darbą siekiama pradėti tik tada, kai to reikia. Pagrindinė „Lean“ vertybė yra vertės suteikimas klientui išleidžiant jų poreikius atitinkančią programinę įrangą ir tai daryti pašalinant kliūtis bei sutrumpinant funkcionalumų pristatymo laiką. Tai ir yra esminiai skirtumai nuo principų, apie kuriuos šneka „Agile“ metodas. Bet taip pat, autoriaus nuomone, svarbu laikantis šių taisyklių neatsisakyti visko, ką suteikia „Agile“, nes produkto kūrime aiškios sistemos nebuvimas suteikia dar daugiau neapibrėžtumo ir situacijų, kuomet produkto leidimai kliento nepasiekia laiku.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{img/AgileVSLean.png}
-    \caption{„Agile“ ir „Lean“ metodų palyginimas}
-    \label{img:mlp}
-\end{figure}
+\begin{table}[H]\footnotesize
+  \centering
+  \caption{„Agile“ ir „Lean“ metodų palyginimas}
+  {\begin{tabular}{|l|c|c|} \hline
+     & „Agile“ & „Lean“ \\
+    \hline
+    Galvoja apie & Klientus & Elimnuoti laiko švaistymą      \\
+    \hline
+    Tvarko & Neapibrėžtumą & Procesų trukmę       \\
+    \hline
+    Suteikia & Veikiantį produktą    & Vertę leidimuose       \\
+    \hline
+    Negatyvios asociacijos  & Kompleksišką struktūrą    & Neapibrėžtumas       \\
+    \hline
+  \end{tabular}}
+  \label{tab:table example}
+\end{table}
 
 \subsection{Išleidimų automatizacija}
 
@@ -114,7 +122,7 @@ Sistemos administratoriams tenka nepriklausančių jiems pareigų, kai dirba įm
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.8]{img/DevOps.png}
-    \caption{PĮ veiklos tarp kurių „DevOps“ inžinieriai siekia automatizuoti procesus}
+    \caption{Veiklos tarp kurių „DevOps“ inžinieriai siekia automatizuoti procesus}
     \label{img:mlp}
 \end{figure}
 
@@ -124,14 +132,13 @@ Nepertraukiamas diegimas (angl. \textit{Continuous Deployment}) yra programinės
     
     \subsubsection{Skirtingos „Git“ šakojimosi strategijos leidimų valdyme}
 
-Pagal 2022 metais atliktą „Stackoverflow“ tyrimą tarp visų versijavimo sistemų - „Git“ buvo paminėta beveik 94 procentus kartų \cite{SaltAstuntas}. Todėl „Git“ šakojimosi strategijos yra labai svarbi sudedamoji dalis PĮ išleidimų valdyme, leidžianti programuotojams turėti atskiras savo kodo šakas (angl. \textit{branch}), kurios suteikia galimybę dirbti su naujais funkcionalumais ar klaidų taisymais nerizikuojant pažeisti pagrindinės kodo bazės. Šiuo metu egzistuoja daug skirtingų metodikų, kurias organizacijos gali pritaikyti atsižvelgdamos į savo poreikius. Pasirinkta strategija daro labai didelę įtaką visam išleidimų valdymo procesui, nes įprastai šakos su pavadinimais „Production“, „Staging“ ar „Development“ turi programinį kodą, kurį pagal pavadinimą automatizuoti procesai naudoja atitinkamoms aplinkoms įdiegti.
+Pagal 2022 metais atliktą „Stackoverflow“ tyrimą tarp visų versijavimo sistemų - „Git“ buvo paminėta beveik 94 procentus kartų \cite{SaltAstuntas}. Todėl „Git“ šakojimosi strategijos yra labai svarbi sudedamoji dalis išleidimų valdyme, leidžianti programuotojams turėti atskiras savo kodo šakas (angl. \textit{branch}), kurios suteikia galimybę dirbti su naujais funkcionalumais ar klaidų taisymais nerizikuojant pažeisti pagrindinės kodo bazės. Šiuo metu egzistuoja daug skirtingų metodikų, kurias organizacijos gali pritaikyti atsižvelgdamos į savo poreikius. Pasirinkta strategija daro labai didelę įtaką visam išleidimų valdymo procesui, nes įprastai šakos su pavadinimais „Production“, „Staging“ ar „Development“ turi programinį kodą, kurį pagal pavadinimą automatizuoti procesai naudoja atitinkamoms aplinkoms įdiegti.
 
         \subsubsubsection{„GitFlow“ metodas}
 
 Šis šakojimosi strategijos metodas suteikia programuotojams galimybę dirbti su keliais funkcionalumais tuo pačiu metu, sukuriant po atskirą šaką kiekvienam iš jų. Jos yra sukuriamos išvedant iš pagrindinės šakos (paprastai vadinamos „Development“ arba „Develop“). Kai darbas su specifiniu funkcionalumu yra pabaigtas (t.y. kodas yra parašytas, patestuotas bei patvirtintas kitų kolegų kaip tinkamas), pakeitimai yra įliejami į bazinę šaką. Tačiau „GitFlow“ turi ir daugiau kompleksiškumo - skirtingai nei kai kuriuose kituose metoduose, naujas programinis kodas klientų naudojamos aplinkos iškart nepasiekia po suliejimo į „Development“ šaką. Norint turėti naują leidimą kuriamos atskiros leidimų šakos su nurodyta versija. Tai leidžia paraleliai turėti daug produkcinių aplinkų su skirtingais išleidimais. Bet svarbu pastebėti, kad tai labai pailgina visą nepertraukiamo diegimo į aplinkas procesą, todėl kai yra reikalingi greiti pataisymai, kuriamos šakos, kurios yra atskiros nuo visos struktūros, kad jos tiesiai keliautų į produkcinės aplinkos šaką, o iš jos, automatinių procesų pagalba, leidimas pasiekia klientų naudojamą produktą. Šiai strategijai išpildyti yra kuriamos tokio tipo šakos:
 
 \begin{itemize}
-    % TODO: Suinteresuotos šalys - įdėti į sąvokas
   \item \textit{Production (Master)}. Šaka, kurioje laikomas visas produkcinės aplinkos kodas. Į ją kodas suliejamas tik iš tokių šakų kaip „Release“ ar „Hotfix“.
   
   \item \textit{Development (Develop)}. Ši šaka kaupia visą kodą, kuris yra produkcinėje aplinkoje, tik dar ir į ją yra suliejami nauji funkcionalumai iš „Feature“ tipo šakų. Kai norima naujo leidimo su įgyvendintu nauju kodu - iš šios šakos yra kuriama nauja, „Release“ tipo.
@@ -160,7 +167,6 @@ Autoriaus nuomone, didelis šio metodo kompleksiškumas gali sukurti ir nemažai
 Tuo tarpu „GitLab Flow“ irgi yra paprastesnė „GitFlow“ alternatyva, tik skirtingai nuo „GitHub“ sukurto sprendimo, šis vietoj vienos produkcinės aplinkos šakos, turi dvi pagrindines \cite{SaltDesimtas}:
 
 \begin{itemize}
-    % TODO: Suinteresuotos šalys - įdėti į sąvokas
   \item \textit{Staging}. Šaka į kurią yra suliejamos naujų funkcionalumų ar klaidų taisymo šakos. Joje esantis kodas automatinių procesų pagalba visada yra atnaujinimas su kiekvienu suliejimu ir įdiegiamas į stabilią, bet ne produkcinę aplinką (ji paprastai yra pasiekiama tik užsakovams, programuotojams ir produktą integruojančioms kitoms įmonėms).
   
   \item \textit{Production}. Kai nusprendžiama, kad stabilioje aplinkoje esantis kodas yra paruoštas - jis suliejamas iš „Staging“ šakos į šią. Tuomet lygiai taip pat - automatiniai procesai užtikrina, kad naujas diegimas pasiektų produkcinę aplinką, kuria jau naudojasi patys produkto vartotojai.
@@ -191,23 +197,47 @@ Internetinių programų leidimams įtaką daro praktiškai visi su produkto ruo�
 Aplinka kaip paslauga (angl. \textit{Environment as a service}) arba kitaip 
 „EaaS“ yra debesų kompiuterijos siūloma infrastruktūra bei paslaugos, kurios yra reikalingos norint pasileisti programas laikinoje ir dinamiškoje testavimo aplinkoje, siekiant sumažinti kompleksiškumą ruošiant konfigūraciją peržiūros aplinkom \cite{SaltTryliktas}. Ši paslauga yra plėtinys populiarios metodikos „IaaS“, kuri siūlo debesų kompiuterijos paslaugas, susijusias su serveriais, saugyklomis ir tinklo sprendimais. Jos abi yra pakankamai panašios, tačiau jos suteikia vartotojams skirtingą abstrakcijos ir valdymo lygį. Jei „IaaS“ suteikia vartotojams virtualius serverių išteklius, tokius kaip virtualios mašinos, saugyklos ir tinklai, tai „EaaS“ yra orientuotas į aukštesnio lygio paslaugas, kurios suteikia visiškai valdomą aplinką programoms paleisti ir leidžia lengvai sukurti trumpalaikes testavimo erdves, nes nereikia dėti jokių pastangų formuojant IT infrastruktūrą. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.9]{img/EassvsIaas.png}
-    \caption{„EaaS“ ir „IaaS“ metodikų palyginimas}
-    \label{img:mlp}
-\end{figure}
+\begin{table}[H]\footnotesize
+  \centering
+  \caption{„EaaS“ ir „IaaS“ metodikų palyginimas}
+  {\begin{tabular}{|l|p{55mm}|p{55mm}|} \hline
+     & „EaaS“ debesų paslaugos & „IaaS“ debesų paslaugos \\
+    \hline
+    Apibrėžimas & Debesų paslauga, kuri suteikia iš anksto sukonfigūruotą aplinką programinės įrangos testavimui & Debesų paslauga, kuri suteikia virtualių mašinų resursus kaip serveriai, saugyklos ar tinklo paslaugos      \\
+    \hline
+    Pavyzdžiai & AWS Elastic Beanstalk, Heroku, Microsoft Azure App Service & AWS EC2, Google Compute Engine, Microsoft Azure Virtual Machine       \\
+    \hline
+    Abstrakcijos lygis & Aukštas & Žemas       \\
+    \hline
+    Fokusas  & Į programinės įrangos kūrimą ir testavimą    & Į IT infrastruktūrą \\
+    \hline
+    Kontrolė  & Galima & Galima (Bet suteikiama daugiau kontrolės konfigūruojant infrastruktūrą) \\
+    \hline
+  \end{tabular}}
+  \label{tab:table example}
+\end{table}
 
 \subsection{Laikinųjų aplinkų skirtumai nuo statinių}
 
 Laikinosios aplinkos (dar kitaip vadinamos peržiūros aplinkomis) yra skirtos testuoti konkretaus funkcionalumo ar šakos kodą prieš vykdant naują leidimą į produkcinę aplinką \cite{SaltVienuoliktas}. Skirtingai nuo įprastų (statinių) aplinkų, kurias aptarėm „Git“ šakojimosi strategijų skyriuje, šios yra naudojamos konkrečiam tikslui, o jį įgyvendinus ištrinamos. Taip išvengiama tokių problemų, kaip duomenų perkrova vienoje aplinkoje bei sunkesnio klaidų vietos identifikavimo, kai keli nauji funkcionalumai yra pasiekę kokybės užtikrinimo aplinką. Taip pat laikinosios aplinkos reikalauja ir struktūrinių pakitimų procesuose, kad verifikacijos dalis būtų vykdoma prieš suliejant šakos kodą į kažkurią iš aplinkų. Šie pokyčiai yra būtini, nes peržiūros aplinkų paskirtis yra izoliuoti likusius kodo pakitimus nuo kitų bei paruošti konkrečios šakos aplinką. Testavimo procesas tampa dar labiau automatizuotas bei patikimas, nes pasinaudojant „EaaS“ debesų kompiuterijos paslaugą yra inicijuojama laikinoji aplinka ir programuotojams tam nereikia skirti jokio papildomo laiko. Laikinųjų aplinkų efektyvumą rodo ir 2022 metais įmonės „Uffizzi“ atliktas tyrimas, kuris teigia, kad integravus laikinųjų aplinkų sprendimą, leidimų dažnumas paaugo 64 procentais, o užduočių atlikimas per programuotoją tapo efektyvesnis 36 procentais \cite{SaltDvyliktas}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.9]{img/LaikinosVsStatines.png}
-    \caption{Laikinųjų ir statinių aplinkų palyginimas}
-    \label{img:mlp}
-\end{figure}
+\begin{table}[H]\footnotesize
+  \centering
+  \caption{Laikinųjų ir statinių aplinkų palyginimas}
+  {\begin{tabular}{|l|p{55mm}|p{55mm}|} \hline
+     & Laikinosios aplinkos & Statinės aplinkos \\
+    \hline
+    Panaudojimo būdai & Kodo peržiūra, testavimas, kokybės užtikrinimo aplinkos alternatyva & Testavimo, kokybės užtikrinimo ir produkcinės statinės aplinkos      \\
+    \hline
+    Ilgaamžiškumas & Aplinkos emferiškos, trumpalaikės & Veikiančios visada       \\
+    \hline
+    Šaka (-os) & Dinamiškai kintančios pagal poreikį & Statinės \newline („Develop“, „Staging“, „Production“) \\
+    \hline
+    Verifikacijos etapas  & Vyksta prieš suliejimą į statines aplinkas & Vyksta po suliejimo į statines aplinkas \\
+    \hline
+  \end{tabular}}
+  \label{tab:table example}
+\end{table}
 
 \subsection{„Git“ šakojimosi strategijų praplėtimas}
 
@@ -317,9 +347,14 @@ Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda
 
 Tačiau „Uffizzi“ sprendimas suteikia tik vieną internetinės svetainės subdomeną visai aplinkai, ko pasekoje yra reikalingas apkrovos išlygintuvas (angl. \textit{load balancer}), kuris pagal užklausą nukreipia į atitinkamą komponentą - arba kliento pusės aplikaciją, arba serverį. Panaudojus populiaraus apkrovos išlygintuvo įrankio „Nginx“ oficialų „Docker“ atvaizdą paruošiamas „Dockerfile“, kuriame įkeliama konfigūracija apibrėžianti kur kokios užklausos turėtų būti nukreipiamos (žr. \hyperref[priedas5]{5 priedą}). Visi kreipimaisi į jungties serverį bus nukreipiami į serverį, o likę į kliento pusės programą.
 
-Galiausiai darbe grįžtasma prie pagrindinės konfigūracijos. Pridedamas apkrovos išlygintuvas nurodant, kad laikinosios aplinkos vienintelis subdomenas bus nukreiptas į jį (žr. \hyperref[priedas6]{6 priedą}).
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{img/lbschema.png}
+    \caption{Apkrovos išlygintuvo veikimo schema}
+    \label{img:mlp}
+\end{figure}
 
-% TODO: Pridėti lb schemukę
+Galiausiai darbe grįžtasma prie pagrindinės konfigūracijos. Pridedamas apkrovos išlygintuvas nurodant, kad laikinosios aplinkos vienintelis subdomenas bus nukreiptas į jį (žr. \hyperref[priedas6]{6 priedą}).
 
     \subsubsection{„Uffizzi CI“ prijungimas}
 
@@ -371,13 +406,12 @@ Darbo metodu padarytos \textbf{išvados}:
   \item Laikinosios aplinkos keičia įmonėje vykdomų procesų eigą, nes kodo verifikacijos laikas yra daromas prieš suliejant kodą į statines aplinkas.
   \item Laikinųjų aplinkų integracija reikalauja papildomų pastangų bei priežiūros, todėl jų suteikiama nauda nėra vienareikšmiškai tik teigiama.
   \item Laikinosios aplinkos palengvina kodo peržiūros procesą, nes nėra reikalingi rankiniai žingsniai peržiūrėti veikiančią internetinę aplikaciją.
-\end{enumerate}
+\end{enumerate} 
 
 \sectionnonum{Tolimesni darbai}
  
 Siūloma dėl empirinių tyrimų trūkumo šiai temai atlikti tyrimą, kuris apibrėžtų pagrindines problemas pasirinkus šią strategiją, kokie taikymo būdai veikia geriausiai ir nustatytų kokybės bei kaštų santykį. Taip pat, svarbu šią programinės įrangos išleidimo metodiką nagrinėti toliau su labiau kompleksinėm architektūrom, kurios įtrauktų mikroservisus, duomenų bazes, vidinius tinklus ir kitas aplinkybės, apsunkinančiais laikinųjų aplinkų integraciją.
 
-% TODO: Peržiūrėti, kad nebūtų piratuotų straipsnių link'ų
 \printbibliography[heading=bibintoc,category=cited] % Šaltinių sąraše nurodoma panaudota
 % literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų
 % (cituotų, perfrazuotų ar bent paminėtų) mokslo leidinių, kitokių publikacijų
@@ -399,49 +433,185 @@ Siūloma dėl empirinių tyrimų trūkumo šiai temai atlikti tyrimą, kuris api
 
 \section{Serverio dalies programinis kodas}
 \label{priedas1}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{img/priedai/backend-kodas.png}
-    \caption{Serverio dalies programinis kodas}
-    \label{img:mlp}
-\end{figure}
+\begin{verbatim}
+// server.js
+var express = require("express");
+var app = express();
+var server = require("http").createServer(app);
+var io = require("socket.io")(server);
+
+var count = 0;
+
+io.on("connection", function (client) {
+  client.on("mygtukas-paspaustas", function (data) {
+    count++;
+    io.emit("pakito-kiekis", count);
+  });
+});
+
+server.listen(3000, function () {
+  console.log("Klausomasi į 3000...");
+});
+\end{verbatim}
 
 
 \section{Vartotojo sąsajos dalies programinis kodas}
 \label{priedas2}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.45]{img/priedai/frontend-kodas.png}
-    \caption{Vartotojo sąsajos dalies programinis kodas}
-    \label{img:mlp}
-\end{figure}
+\begin{verbatim}
+// frontend.js
+var express = require("express");
+var app = express();
+var server = require("http").createServer(app);
+
+app.engine("html", require("ejs").renderFile);
+app.use(express.static(__dirname + "/public"));
+
+app.get("/", function (req, res, next) {
+  res.render(__dirname + `/public/index.html`);
+});
+
+server.listen(5000, function () {
+  console.log("Klausomasi į 5000...");
+});
+
+// index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mygtukų paspaudimas</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Mygtukų paspaudimas</h1>
+    <p id="paspaustiMygtukaiId">Mygtukas buvo paspaustas 0 kartų.</p>
+    <button onclick="buttonClicked()">Paspausk mane</button>
+    <script src="socket.io.js"></script>
+    <script>
+      var parentUrl = window.location.origin;
+      var socket = io.connect(`${parentUrl}`);
+
+      function buttonClicked() {
+        socket.emit("mygtukas-paspaustas");
+      }
+
+      socket.on("pakito-kiekis", function (data) {
+        document.getElementById(
+          "paspaustiMygtukaiId"
+        ).innerHTML = `Mygtukas buvo paspaustas ${data} kartų.`;
+      });
+    </script>
+  </body>
+</html>
+\end{verbatim}
 
 \section{„Docker“ atvaizdų konfigūracija}
 \label{priedas3}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.45]{img/priedai/dockerfiles.png}
-    \caption{„Docker“ atvaizdų konfigūracija internetinės programos komponentams}
-    \label{img:mlp}
-\end{figure}
+\begin{verbatim}
+// backend/Dockerfile
+FROM node:16
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+CMD [ "node", "server.js" ]
+
+// frontend/Dockerfile
+FROM node:16
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 5000
+CMD [ "node", "frontend.js" ]
+\end{verbatim}
 
 \section{„Nginx“ atvaizdo ir veikimo konfigūracijos}
 \label{priedas4}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.45]{img/priedai/nginx.png}
-    \caption{„Nginx“ atvaizdo ir veikimo konfigūracijos}
-    \label{img:mlp}
-\end{figure}
+\begin{verbatim}
+// loadbalancer/Dockerfile
+FROM nginx:1
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    curl \
+    wait-for-it \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY ./nginx.conf.template /etc/nginx/templates/nginx.conf.template
+
+ENV PORT=8080 \
+    FRONTEND_HOST=localhost \
+    FRONTEND_HOST=5000 \
+    BACKEND_HOST=localhost \
+    BACKEND_HOST=3000
+
+// loadbalancer/nginx.conf.template
+server {
+    listen       ${PORT};
+    server_name  localhost;
+    location / {
+     proxy_pass      http://${FRONTEND_HOST}:${FRONTEND_PORT}/;
+    }
+    location /socket.io/ {
+     proxy_pass      http://${BACKEND_HOST}:${BACKEND_PORT}/socket.io/;
+    }
+}
+\end{verbatim}
 
 \section{Laikinųjų aplinkų konfigūracija}
 \label{priedas5}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{img/priedai/compose.png}
-    \caption{Laikinųjų aplinkų konfigūracija}
-    \label{img:mlp}
-\end{figure}
+\begin{verbatim}
+// docker-compose.yml
+x-uffizzi:
+  ingress:
+    service: loadbalancer
+    port: 8080
+  continuous_previews:
+    deploy_preview_when_pull_request_is_opened: true
+    delete_preview_when_pull_request_is_closed: true
+    share_to_github: true
+
+services:
+  #=== Backend ===
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+  #=== Frontend ===
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:5000"
+  #=== LoadBalancer ===
+  loadbalancer:
+    build:
+      context: ./loadbalancer
+      dockerfile: ./Dockerfile
+    environment:
+      PORT: 8080
+      FRONTEND_HOST: "localhost"
+      FRONTEND_PORT: "5000"
+      BACKEND_HOST: "localhost"
+      BACKEND_PORT: "3000"
+\end{verbatim}
 
 \section{Ekrano nuotrauka rodanti laikinųjų aplinkų veikimą}
 \label{priedas6}
@@ -454,6 +624,4 @@ Siūloma dėl empirinių tyrimų trūkumo šiai temai atlikti tyrimą, kuris api
 
 \end{document}
 
-% TODO: Perdaryti pav i lenteles
-% TODO: Išsiaiškinti apie priedų numeracijas
-% TODO: Išsiaiškinti dėl literatūros, ar tinkamai aprašiau
+% TODO: Pakeisti kodo pav į tikrą kodą
