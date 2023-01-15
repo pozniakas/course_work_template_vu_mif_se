@@ -21,7 +21,7 @@
 \institute{Informatikos institutas}
 \department{Programų sistemų studijų programa}
 \papertype{Kursinis darbas}
-\title{Interneto programų išleidimo valdymas naudojant laikinasias aplinkas}
+\title{Interneto programų išleidimo valdymas naudojant laikinąsias aplinkas}
 \titleineng{Release management of Web Applications using temporary environments}
 \status{4 kurso 1 grupės studentas}
 \author{Domas Pozniakas}
@@ -41,11 +41,11 @@
 
 Vienas iš alternatyvių ir dar nespėjusių plačiai išpopuliarėti būdų suvaldyti programinės įrangos išleidimo procesus internetinėms programoms yra naudoti laikinas aplinkas, kurios yra izoliuotos, naudojamos testavimui ir diegimui. Šios aplinkos leidžia komandoms išbandyti naujus programinės įrangos leidimus nepažeidžiant produkcinės (angl. \textit{production}) aplinkos, kurioje internetine svetaine jau naudojasi klientai \cite{SaltAntras}. Tai suteikia galimybes laisviau ir geriau testuoti naujus funkcionalumus, kadangi nėra grėsmės pažeisti jautrių duomenų, sutrikdyti klientų patirties ar kolegų darbo efektyvumo. Tačiau daugeliui įmonių reikia atsargiai vertinti galimybę įgyvendinti ir automatizuoti tokią metodiką. Remiantis 2011 metais atlikto tyrimo duomenimis - daug įmonių teigia, kad trūksta visapusiškų įrankių, kurie leistų ir padėtų automatizuoti procesus susijusius su programinės įrangos išleidimo valdymu \cite{SaltPirmas}. Dėl šių priežasčių laikinųjų aplinkų paruošimas ir priežiūra gali atimti nemažai laiko sąnaudų ir brangiai kainuoti.
 
- Atsižvelgiant į tai, kad siekiant įgyvendinti šią metodiką kyla nemažai galimų rizikų ar sunkumų - darbe siekiama nustatyti ar laikinosios aplinkos yra tinkamas ir efektyvus sprendimas, norint pagerinti programuotojų, testuotojų ir kitų profesijų, susijusių su IT sektoriumi, patirtį bei produkto sėkmingo veikimo rezultatus. Tam reikia turėti gerai funkcionuojančius programinės įrangos išleidimo valdymo procesus, kurie suteiktų galimybę tinkamai testuoti, apsaugoti ir užtikrinti stabilų produkto veikimą produkcinėje aplinkoje. Taip pat, įvertinti ar reikalingi kaštai yra verti rezultatų bei palyginti su tradiciniais būdais programinės įrangos išleidimo valdyme.
+ Atsižvelgiant į tai, kad siekiant įgyvendinti šią metodiką kyla nemažai galimų rizikų ar sunkumų - darbe siekiama nustatyti ar laikinosios aplinkos yra tinkamas ir efektyvus sprendimas, norint pagerinti programuotojų, testuotojų ir kitų profesijų, susijusių su IT sektoriumi, patirtį bei produkto sėkmingo veikimo rezultatus. Tam reikia turėti gerai funkcionuojančius programinės įrangos išleidimo valdymo procesus, kurie suteiktų galimybę tinkamai testuoti, apsaugoti ir užtikrinti stabilų produkto veikimą produkcinėje aplinkoje. Taip pat, integruoti vieną iš rekomenduojamų sprendimų praktiškai bei palyginti su tradiciniais būdais programinės įrangos išleidimo valdyme.
 
 \bigskip
 
-\textbf{Darbo tikslas} - įvertinti laikinųjų aplinkų internetinėms programoms tinkamumą išleidimo valdymui. 
+\textbf{Darbo tikslas} - įvertinti laikinųjų aplinkų interneto programoms tinkamumą išleidimo valdymui. 
 
 \textbf{Darbe keliami uždaviniai:}
 
@@ -60,7 +60,7 @@ Vienas iš alternatyvių ir dar nespėjusių plačiai išpopuliarėti būdų suv
 Šiame skyriuje nagrinėjama teorinė medžiaga apie įprastas programinės įrangos išleidimo valdymo metodikas, įskaitant ir naudojamas praktikas bei principus, kurie taikomi ruošiant sukurto IT sprendimo leidimus į produkcinę aplinką. Tikslas yra suteikti skaitytojui geresnį suvokimą apie šią sritį ir su kokiomis problemomis IT sektoriuje yra susiduriama taikant įprastus valdymo metodus šiuo metu.
 
 \subsection{Pagrindiniai principai}
-Kuriant programinę įrangą ir valdant jos leidimus susiformavo keli esminiai principai ir nepriklausomai nuo kitų aplinkybių, jie yra naudojami planuojant, kontroliuojant bei vykdant programinės įrangos išleidimo procesus. Juos visus galima patalpinti į Krioklio (angl. \textit{Waterfall}) metodą, kurį sudaro penkios dalys \cite{SaltTrecias}.
+Kuriant programinę įrangą ir valdant jos leidimus, susiformavo keli esminiai principai ir nepriklausomai nuo kitų aplinkybių, jie yra naudojami planuojant, kontroliuojant bei vykdant programinės įrangos išleidimo procesus. Juos visus galima patalpinti į Krioklio (angl. \textit{Waterfall}) metodą, kurį sudaro penkios dalys \cite{SaltTrecias}.
 
 \begin{figure}[H]
     \centering
@@ -69,7 +69,7 @@ Kuriant programinę įrangą ir valdant jos leidimus susiformavo keli esminiai p
     \label{img:mlp}
 \end{figure}
 
-Šis metodas yra taip pavadintas, kadangi jo veikimo principo pavaizdavimas yra paremtas iš tradicinių pramoninių vamzdynų, kur viskas vyksta aiškiai apibrėžtais etapais ir eiliškumu \cite{SaltTrecias}. Kiekvienas iš šio metodo etapų atitinka konkretų principą susiformavusį IT sektoriuje:
+Šis metodas yra taip pavadintas, kadangi jo veikimo principo pavaizdavimas yra paremtas tradiciniais pramoniniais vamzdynais, kur viskas vyksta aiškiai apibrėžtais etapais ir eiliškumu \cite{SaltTrecias}. Kiekvienas iš šio metodo etapų atitinka konkretų principą susiformavusį IT sektoriuje:
 
 \begin{itemize}
     % TODO: Suinteresuotos šalys - įdėti į sąvokas
@@ -77,7 +77,7 @@ Kuriant programinę įrangą ir valdant jos leidimus susiformavo keli esminiai p
 
   \item \textit{Projektavimas}. Proceso metu bandoma suprojektuoti sistemos architektūrą, kuri vėliau yra patikrinama siekiant įsitikinti ar nėra nukrypimų nuo reikalavimų, turimų resursų bei produkto apimties \cite{SaltKetvirtas}. Suformuota architektūra leidžia iš anksto numatyti galimas problemas ir turėti stabiliai veikiančią sistemą išvengiant projektavimo bei optimizavimo klaidų atsiradus naujiems leidimams, kurie keičia sistemos veikimą. 
   
-  \item \textit{Implementacija}. Programinė įranga kuriama pagal suformuotus reikalavimus, kurie buvo paruošti ankstesniuose etapuose \cite{SaltPenktas}.  Autoriaus nuomone tai leidžia išvengti komunikacijos klaidų tarp klientų ir suinteresuotų šalių bei vykdytojų. O tai lemia, kad programinė įranga yra išleidžiama dažniau į produkcinę aplinką mažesniais komponentais arba vienetais, nes nėra reikalingas pilnai įgyvendintas funkcionalumas, kuris leistų įsitikinti ar tai atitinka kliento poreikius.
+  \item \textit{Implementacija}. Programinė įranga kuriama pagal suformuotus reikalavimus, kurie buvo paruošti ankstesniuose etapuose \cite{SaltPenktas}.  Autoriaus nuomone tai leidžia išvengti komunikacijos klaidų tarp klientų, suinteresuotų šalių ir vykdytojų. O tai lemia, kad programinė įranga yra išleidžiama dažniau į produkcinę aplinką mažesniais komponentais arba vienetais, nes nėra reikalingas pilnai įgyvendintas funkcionalumas, kuris leistų įsitikinti ar tai atitinka kliento poreikius.
   
   \item \textit{Verifikacija}. Šiam principui užtikrinti reikalinga testuotojų komanda, kuri prieš išleidžiant naujus funkcionalumus tikrina naujo kodo kokybę bei paruoštus funkcionalumus \cite{SaltKetvirtas}. Tai leidžia nustatyti, ar sistema yra paruošta naudotis klientams ir galima dislokuoti naują leidimą.
   
@@ -256,7 +256,7 @@ Laikinųjų aplinkų metodas papildo daugelį strategijų naudojamų programinė
 %  3 dalis. Praktinė dalis
 \section{Laikinųjų aplinkų sprendimo integracija}
 
-Siekiama įvykdyti laikinųjų aplinkų integraciją į pavyzdinį projektą, kurio kodas imituoja realios internetinės svetainės veikimą. Todėl bus naudojamas ir serverio pusės (angl. \textit{server-side}), ir į ją besikreipiančios vartotojo sąsajos programos, kad sukurti realų scenarijų. Pačiai laikinųjų aplinkų integracijai buvo pasirinktas rekomenduojamas įrankis pagal „Uffizzi“ produkto tyrimą, kuris buvo atliktas 2022 metais \cite{SaltDvyliktas}. Ši įmonė siūlo „EaaS“ tipo įrankį ir dokumentacija kaip tinkamai integruoti. Jos tikslas yra parodyti, kad internetinėms svetainėms sprendimas veikia tinkamai ir kad nėra reikalinga jokia papildoma konfigūracija su kiekviena nauja kodo sujungimo užklausa. Visi automatizuoti procesai, konfigūracijos bei programinis kodas yra laikomas „GitHub“ platformoje.
+Siekiama įvykdyti laikinųjų aplinkų integraciją į pavyzdinį projektą, kurio kodas imituoja realios internetinės svetainės veikimą. Todėl bus naudojamas ir serverio pusės (angl. \textit{server-side}), ir į ją besikreipiančios vartotojo sąsajos programos, kad sukurti realų scenarijų. Pačiai laikinųjų aplinkų integracijai buvo pasirinktas rekomenduojamas įrankis pagal „Uffizzi“ produkto tyrimą, kuris buvo atliktas 2022 metais \cite{SaltDvyliktas}. Ši įmonė siūlo „EaaS“ tipo įrankį ir dokumentaciją, turinčią reikalingą informaciją apie integravimą. Jos tikslas yra parodyti, kad internetinėms svetainėms sprendimas veikia tinkamai ir kad nėra reikalinga jokia papildoma konfigūracija su kiekviena nauja kodo sujungimo užklausa. Visi automatizuoti procesai, konfigūracijos bei programinis kodas yra laikomas „GitHub“ platformoje.
 
 \subsection{Pavyzdinis svetainės kodas}
 
@@ -316,7 +316,7 @@ Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda
 
 Tačiau „Uffizzi“ sprendimas suteikia tik vieną domeną visai aplinkai, todėl reikalingas apkrovos išlygintuvas (angl. \textit{load balancer}), kuris pagal užklausą nukreipia į atitinkamą komponentą - arba kliento pusės aplikaciją, arba serverį. Panaudojus populiaraus apkrovos išlygintuvo įrankio „Nginx“ oficialų „Docker“ atvaizdą paruošiamas „Dockerfile“ tipo failas, kuriame įkeliama konfigūracija apibrėžianti kur kokios užklausos turėtų būti nukreipiamos (žr. \hyperref[priedas5]{5 priedą}). 
 
-Galiausiai baigiama pagrindinė konfigūracija pridėjus apkrovos išlygintuvą ir nurodžius, kad laikinosios aplinkos domenas bus nukreiptas į jį (žr. \hyperref[priedas4]{5 priedą}).
+Galiausiai baigiama pagrindinė konfigūracija pridėjus apkrovos išlygintuvą ir nurodžius, kad laikinosios aplinkos domenas bus nukreiptas į jį (žr. \hyperref[priedas6]{6 priedą}).
 
     \subsubsection{„Uffizzi CI“ prijungimas}
 
@@ -334,13 +334,45 @@ Galiausiai baigiama pagrindinė konfigūracija pridėjus apkrovos išlygintuvą 
 Imituotai internetinei programai pavyko pritaikyti vieną iš rekomenduojamų laikinųjų aplinkų sprendimą, kuris nereikalavo iš anksto paruošto programinės įrangos išleidimo su registrais paruoštiems atvaizdams. Kodo sujungimo užklausos tapo paprasčiau peržiūrimos, nes nėra reikalingi rankiniai žingsniai tam pasiekti. Taip pat įrankis suteikė „DevOps“ inžinieriams patogius įrankius stebėti šiuo metu veikiančias laikinąsias aplinkas. Tačiau netgi ir jau iš anksčiau naudojant tradicinį programinės įrangos išleidimo valdymą, šį sprendimą galimą pritaikyti pagal poreikius, nes konfigūracija suteikia pakankamai parametrų tam apibrėžti.
 
 \sectionnonum{Rezultatai ir išvados}
-Rezultatų ir išvadų dalyje turi būti aiškiai išdėstomi pagrindiniai darbo
-rezultatai (kažkas išanalizuota, kažkas sukurta, kažkas įdiegta) ir pateikiamos
-išvados (daromi nagrinėtų problemų sprendimo metodų palyginimai, teikiamos
-rekomendacijos, akcentuojamos naujovės).
+
+Darbo metodu pasiekti \textbf{rezultatai}:
+
+\begin{enumerate}
+  \item Išanalizuoti tradiciniai programinės įrangos išleidimo internetinėms programoms būdai.
+    \begin{itemize}
+      \item Įvardinti baziniai principai, kuriais vadovaujantis susiformavo programinės įrangos išleidimo valdymas.
+      \item Apžvelgtos „Agile“ ir „Lean“ metodikų sąvybės, kurios atsispindi tradciniam leidimų valdyme.
+      \item Apibrėžta „DevOps“ pozicijos ir automatizacijos svarba siekiant efektyvių leidimų.
+      \item Paaiškintos skirtingos „Git“ šakojimosi strategijos leidimų valdyme
+    \end{itemize}
+  \item Apžvelgtas laikinųjų aplinkų sprendimas tokio tipo sistemoms bei jo taikymo būdai.
+    \begin{itemize}
+      \item Apibrėžta debesų kompiuterijos paslauga „EaaS“ ir jos panaudojimas su laikinosiomis aplinkomis.
+      \item Palygintos laikinosios ir statinės aplinkos, įvardinant skirtumus.
+      \item Praplėstos „Git“ šakojimosi strategijos integruojant ir laikinąsias aplinkas.
+      \item Įvardinti skirtingi galimi būdai internetinėms programoms integruoti tokio tipo sprendimą.
+    \end{itemize}
+  \item Integruotas vienas iš laikinųjų aplinkų sprendimų į programinės įrangos išleidimo valdymą.
+    \begin{itemize}
+      \item Suprojektuotas ir suprogramuotas pavyzdinis svetainės kodas.
+      \item Imitacinis kodas buvo paruoštas programinės įrangos leidimams.
+      \item Pasirinktas integracijos tipas bei paruošta konfigūracija laikinosiom aplinkom įgyvendinti.
+      \item Įjungtos laikinosios aplinkos su kiekviena nauja kodo sujungimo užklausa.
+    \end{itemize}
+\end{enumerate}
+
+Darbo metodu padarytos \textbf{išvados}:
+
+\begin{enumerate}
+  \item Tradiciniai programinės įrangos išleidimo valdymo metodai užtikrina reikiamą saugumą ar greitį, tačiau susiduriama su problemomis, kai pasirinkus saugesnį metodą nukenčia greitis, o pasirinkus greitį, nukenčia saugumas.
+  \item Laikinosios aplinkos keičia įmonėje vykdomų procesų eigą, nes kodo verifikacijos laikas yra daromas prieš suliejant kodą į statines aplinkas.
+  \item Laikinųjų aplinkų integracija reikalauja papildomų pastangų bei priežiūros, todėl jų suteikiama nauda nėra vienareikšmiškai tik teigiama.
+  \item Laikinosios aplinkos palengvina kodo peržiūros procesą, nes nėra reikalingi rankiniai žingsniai peržiūrėti veikiančią internetinę aplikaciją.
+\end{enumerate}
 
 \sectionnonum{Tolimesni darbai}
-Aprašyti ką su šia tema reikėtų daryti toliau
+ 
+Siūloma dėl empirinių tyrimų trūkumo šiai temai atlikti tyrimą, kuris apibrėžtų pagrindines problemas pasirinkus šią strategiją, kokie taikymo būdai veikia geriausiai ir nustatytų kokybės bei kaštų santykį. Taip pat, svarbu šią programinės įrangos išleidimo metodiką nagrinėti toliau su labiau kompleksinėm architektūrom, kurios įtrauktų mikroservisus, duomenų bazes, vidinius tinklus ir kitas savybes, apsunkinančiais laikinųjų aplinkų integraciją.
 
 % TODO: Peržiūrėti, kad nebūtų piratuotų straipsnių link'ų
 \printbibliography[heading=bibintoc,category=cited] % Šaltinių sąraše nurodoma panaudota
@@ -399,12 +431,12 @@ Aprašyti ką su šia tema reikėtų daryti toliau
     \label{img:mlp}
 \end{figure}
 
-\section{Laikinųjų aplinkų konfiguracija}
+\section{Laikinųjų aplinkų konfigūracija}
 \label{priedas5}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{img/priedai/compose.png}
-    \caption{Laikinųjų aplinkų konfiguracija}
+    \caption{Laikinųjų aplinkų konfigūracija}
     \label{img:mlp}
 \end{figure}
 
