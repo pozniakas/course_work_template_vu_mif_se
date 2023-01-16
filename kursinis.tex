@@ -36,7 +36,7 @@
 \tableofcontents
 
 \sectionnonum{Įvadas}
-Besivystant IT sektoriui kompanijos skiria savo laiką ne tik internetinių programų vystymui, bet vis daugiau atkreipiama dėmesio ir į procesus susijusius su sukurtos programinės įrangos išleidimu (angl. \textit{release}). Kadangi priešingu paruošti leidimai nėra pateikiami klientui tinkamai ir jie susiduria su nemažai problemų, nors pats produktas ir yra kokybiškai programuojamas. Visos šios situacijos vis labiau iškelia efektyvų programinės įrangos išleidimo valdymo poreikį. Atkreipiama daugiau dėmesio į internetinių programų kūrimo, testavimo ir diegimo valdymo procesus, kuriuose išryškėja tokių veiklų svarba, kaip skirtingų komandų darbo koordinavimas, išleidimo datų planavimas, programinės įrangos testavimo ir paruošimo diegimui užtikrinimas. Tačiau daugelyje įmonių su pastarosiomis pora veiklų kyla nemažai problemų, nepaisant visų turimų būtinųjų išteklių (t.y. tokių, kaip žmogiškieji, finansiniai bei laiko ištekliai), nes trūksta efektyvaus valdymo susijusio su programinės įrangos išleidimu \cite{SaltPirmas}. 
+Besivystant IT sektoriui kompanijos skiria savo laiką ne tik internetinių programų vystymui, bet vis daugiau atkreipiama dėmesio ir į procesus susijusius su sukurtos programinės įrangos išleidimu (angl. \textit{release}). Kadangi priešingu atveju, paruošti leidimai nėra pateikiami klientui tinkamai ir jie susiduria su nemažai problemų, nors pats produktas ir yra kokybiškai programuojamas. Visos šios situacijos vis labiau iškelia efektyvų programinės įrangos išleidimo valdymo poreikį. Atkreipiama daugiau dėmesio į internetinių programų kūrimo, testavimo ir diegimo valdymo procesus, kuriuose išryškėja tokių veiklų svarba, kaip skirtingų komandų darbo koordinavimas, išleidimo datų planavimas, programinės įrangos testavimo ir paruošimo diegimui užtikrinimas. Tačiau daugelyje įmonių su pastarosiomis pora veiklų kyla nemažai problemų, nepaisant visų turimų būtinųjų išteklių (t.y. tokių, kaip žmogiškieji, finansiniai bei laiko ištekliai), nes trūksta efektyvaus valdymo susijusio su programinės įrangos išleidimu \cite{SaltPirmas}. 
 
 
 Vienas iš galimų alternatyvių būdų suvaldyti programinės įrangos išleidimo procesus internetinėms programoms yra naudoti laikinąsias aplinkas. Jomis norima leisti komandoms išbandyti naujus programinės įrangos leidimus nepažeidžiant produkcinės (angl. \textit{production}) aplinkos, kurioje internetine svetaine jau naudojasi klientai \cite{SaltAntras}. Taip siekiama sukurti sąlygas, kad būtų laisviau ir lengviau testuoti naujus funkcionalumus be grėsmės pažeisti jautrių duomenų, sutrikdyti klientų patirties ar kolegų darbo efektyvumo. Tačiau nemažai daliai įmonių toks sprendimas gali pasirodyti neatsargus. Remiantis 2011 metais atlikto tyrimo duomenimis - daug įmonių teigia, kad trūksta visapusiškų įrankių, kurie leistų ir padėtų automatizuoti procesus susijusius su programinės įrangos išleidimo valdymu \cite{SaltPirmas}. Dėl šių priežasčių laikinųjų aplinkų paruošimas ir priežiūra gali atimti nemažai laiko sąnaudų ir brangiai kainuoti.
@@ -51,9 +51,9 @@ Vienas iš galimų alternatyvių būdų suvaldyti programinės įrangos išleidi
 
 1. Išanalizuoti tradicinius programinės įrangos išleidimo internetinėms programoms būdus ir įvardinti privalumus bei kylančias problemas.
 
-2. Apžvelgti laikinųjų aplinkų naudą tokio tipo sistemoms, jų taikymą bei identifikuoti egzistuojančias problemas.
+2. Apžvelgti laikinųjų aplinkų taikymą tokio tipo sistemoms ir naudą lyginant su statinėmis aplinkomis.
 
-3. Integruoti laikinųjų aplinkų metodą internetinės programos išleidimų valdymui bei apžvelgti pasiektus rezultatus.
+3. Integruoti laikinųjų aplinkų metodą internetinės programos išleidimų valdymui bei apžvelgti paruošto sprendimo įtaką išleidimo valdymui.
 
 % 1 dalis. Tradciniai metodai
 \section{Tradicinių išleidimo valdymo metodikų apžvalga}
@@ -194,8 +194,6 @@ Internetinių programų leidimams įtaką daro praktiškai visi su produkto ruo�
 
 \subsection{Debesų kompiuterijos paslauga „EaaS“}
 
-% TODO: Išsiaiškinti ar galima lyginti IaaS su Eaas ir jei taip - įrodyti dėstytojui ir čia pagrįst, jei ne - pakeist su PaaS vs EaaS
-
 Aplinka kaip paslauga (angl. \textit{Environment as a service}) arba kitaip 
 „EaaS“ yra debesų kompiuterijos siūloma infrastruktūra bei paslauga, kuri yra reikalinga norint pasileisti programas laikinoje ir dinamiškoje testavimo aplinkoje, siekiant sumažinti kompleksiškumą ruošiant konfigūraciją peržiūros aplinkom \cite{SaltTryliktas}. Ši paslauga yra plėtinys populiarios metodikos „IaaS“, kuri siūlo debesų kompiuterijos paslaugas, susijusias su serveriais, saugyklomis ir tinklo sprendimais. Jos abi yra pakankamai panašios, tačiau jos suteikia vartotojams skirtingą abstrakcijos ir valdymo lygį. Jei „IaaS“ suteikia vartotojams virtualius serverių išteklius, tokius kaip virtualios mašinos, saugyklos ir tinklai, tai „EaaS“ yra orientuotas į aukštesnio lygio paslaugas, kurios suteikia visiškai valdomą aplinką programoms paleisti ir leidžia lengvai sukurti trumpalaikes testavimo erdves, nes nereikia dėti jokių pastangų formuojant IT infrastruktūrą. 
 
@@ -221,9 +219,17 @@ Aplinka kaip paslauga (angl. \textit{Environment as a service}) arba kitaip
 
 \subsection{Laikinųjų aplinkų skirtumai nuo statinių}
 
-% TODO: Labiau pabrėžti laikinųjų aplinkų privalumus (išvarinti punktais ir pnš.). Taip pat, prie pranšumų paminėti greitį.
+Laikinosios aplinkos (dar kitaip vadinamos peržiūros aplinkomis) yra skirtos testuoti konkretaus funkcionalumo ar šakos kodą prieš vykdant naują leidimą į produkcinę aplinką \cite{SaltVienuoliktas}. Skirtingai nuo įprastų (statinių) aplinkų, kurias aptarėm „Git“ šakojimosi strategijų skyriuje, šios yra naudojamos konkrečiam, ką tik įvardintam tikslui, o jį įgyvendinus aplinkos yra ištrinamos. Šios savybės leidžia turėti keletą privalumų lyginant su statinėmis aplinkomis, kuriuos suteikia laikinosios:
 
-Laikinosios aplinkos (dar kitaip vadinamos peržiūros aplinkomis) yra skirtos testuoti konkretaus funkcionalumo ar šakos kodą prieš vykdant naują leidimą į produkcinę aplinką \cite{SaltVienuoliktas}. Skirtingai nuo įprastų (statinių) aplinkų, kurias aptarėm „Git“ šakojimosi strategijų skyriuje, šios yra naudojamos konkrečiam, ką tik įvardintam tikslui, o jį įgyvendinus aplinkos yra ištrinamos. Taip išvengiama tokių problemų, kaip duomenų perteklius vienoje aplinkoje bei sunkesnio klaidų vietos identifikavimo, kai keli nauji funkcionalumai yra pasiekę kokybės užtikrinimo aplinką. Taip pat, laikinosios aplinkos reikalauja ir struktūrinių pakitimų procesuose, kad verifikacijos dalis būtų vykdoma prieš suliejant šakos kodą į kažkurią iš aplinkų. Šie pokyčiai yra būtini, nes peržiūros aplinkų paskirtis yra izoliuoti likusius kodo pakitimus nuo kitų bei paruošti konkrečios šakos aplinką. Testavimo procesas tampa dar labiau automatizuotas, izoliuotas bei patikimas, nes pasinaudojant „EaaS“ debesų kompiuterijos paslauga yra inicijuojama laikinoji aplinka atskirai šakai ir programuotojams tam nereikia skirti jokio papildomo laiko. Laikinųjų aplinkų efektyvumą rodo ir 2022 metais įmonės „Uffizzi“ atliktas tyrimas, kuris teigia, kad integravus laikinųjų aplinkų sprendimą, leidimų dažnumas paaugo 64 procentais, o užduočių atlikimas per programuotoją tapo efektyvesnis 36 procentais \cite{SaltDvyliktas}.
+\begin{itemize}
+  \item \textit{Duomenų pertekliaus išvengimas}. Statinės aplinkos savyje kaupia visus testinius ir netikrus duomenis (angl. \textit{mock data}). Todėl efektyviai neišvalius duomenų gali atsirasti jų perteklius, kai tuo tarpu laikinosios aplinkos kas kartą yra paruošiamos tuščios ir pripildomos tik reikalingais naujais netikrais duomenimis.
+  \item \textit{Lengvesnis klaidų vietos identifikavimas}. Naudojant laikinąsias aplinkas yra lengviau atrasti probleminę vietą, nes aplinka yra pilnai izoliuota ir neturi kitų naujų funkcionalumų kodo, skirtingai nei statinės aplinkos.
+  \item \textit{Verifikacija vykdoma prieš suliejimą į aplinką}. Statinės aplinkos paprastai pirma sulaukia naujo programinio kodo ir tik tuomet yra testuojamos prieš darant diegimus, o su laikinosiomis aplinkomis šį procesą įgyvendinti dar iki suliejimo.
+\end{itemize}
+
+ Dėl visų šių priežasčių, testavimo procesas tampa dar labiau automatizuotas, izoliuotas bei patikimas, nes pasinaudojant „EaaS“ debesų kompiuterijos paslauga yra inicijuojama laikinoji aplinka atskirai šakai ir programuotojams tam nereikia skirti jokio papildomo laiko. 
+
+Laikinųjų aplinkų efektyvumą rodo ir 2022 metais įmonės „Uffizzi“ atliktas tyrimas, kuris teigia, kad integravus laikinųjų aplinkų sprendimą, leidimų dažnumas paaugo 64 procentais, o užduočių atlikimas per programuotoją tapo efektyvesnis 36 procentais \cite{SaltDvyliktas}.
 
 \begin{table}[H]\footnotesize
   \centering
@@ -275,7 +281,7 @@ Norint integruoti laikinąsias aplinkas į internetinės programos išleidimo va
     \begin{itemize}
       \item Programuotojas atidaro kodo sujungimo užklausą iš vienos šakos į kitą
       \item Automatiniai procesai užregistruoja naują kodo užklausą ir įvykdo veiksmus, kurie praneša „EaaS“ paslaugą teikiančiam sprendimui apie naują reikalingą laikinąją aplinka.
-      \item Be jokio programuotojo ar „DevOps“ inžinieriaus įsikišmo yra paruošiama laikinoji aplinka su kodo sujungimo užklausos šaka suteiktoje IT infrastruktūroje.
+      \item Be jokio programuotojo ar „DevOps“ inžinieriaus interakcijos yra paruošiama laikinoji aplinka su kodo sujungimo užklausos šaka suteiktoje IT infrastruktūroje.
       \item Naudojamas „EaaS“ įrankis praneša į kodo sujungimo užklausos komentarus apie sėkmingą laikinosios aplinkos paruošimą ir nurodo internetinį adresą, kuriuo galima pasiekti laikinąją aplinką.
       \item Automatiniai procesai užregistruoja, kad kodo užklausa yra uždaroma arba praėjo nustatytas terminas bei praneša įrankiui, kad būtų ištrinta laikinoji aplinka.
       \item „EaaS“ paslaugą teikiantis sprenimas pasirūpina, jog laikinoji aplinka būtų pašalinta.
@@ -283,23 +289,23 @@ Norint integruoti laikinąsias aplinkas į internetinės programos išleidimo va
 
 \end{itemize}
 
-% TODO: Skyrius antroje dalyje apie iššūkius su laikinom aplinkoms (parodyt kaip spręsti komplikacijas, jei išeina, trečioje dalyje)
+\subsection{Kylantys iššūkiai}
 
-% TODO: Aprašius kylančias problemas (ir išryškinus naudą) - parašyti aiškesnį apibendrinimą jog įtikintų.
+Emferiškai veikiančių aplinkų integravimas į programinės įrangos išleidimo valdymą gali būti sudėtingas, nes reikia pamodifikuoti egzistuojančius procesus. Vienas iš pagrindinių iššūkių yra užtikrinti, kad laikinoji aplinka atitiktų produkcinės aplinkos kopiją, nes tik taip mūsų testavimas ir peržiūra būtų patikimi. Be to, svarbu užtikrinti, kad trumpalaikėje aplinkoje naudojami duomenys būtų atkartoti ir laikinosiose aplinkose, nes be realių duomenų aplinka stokos medžiagos su kuria dirbti ir testuoti. O siekiant, kad šis procesas būtų efektyvus, reikia automatizuoti laikinųjų aplinkų veikimą. Šiam veiksmui atlikti reikalinga „DevOps“ inžinierių komanda.
 
 \subsection{Apibendrinimas}
 
-Laikinųjų aplinkų metodas gali papildyti daugelį strategijų naudojamų programinės įrangos išleidimo valdymui internetinėms programoms. Pati metodika yra paremta debesų kompiuterijos paslaugos „EaaS“ principu, kai visa IT infrastruktūra yra sukonfigūruota iš anksto ir kiekvienam scenarijui, kai reikalingos laikinosios aplinkos, nebereikia rūpintis kaip debesų serveriuose programa bus paruošta naudojimui. Strategija išsiskiria tuo, kad yra priešingybė tradicinėms statinėms aplinkoms, nes veikia emferiškai, dinamiškai prisitaiko prie kodo pakeitimų. Norint pasiekti išvadų šiame darbe - svarbu integruoti laikinąsias aplinkas, kadangi nėra daug apibrėžiančių empirinių tyrimų, kaip tai tinkamai padaryti.
+Laikinųjų aplinkų metodas gali papildyti daugelį strategijų naudojamų programinės įrangos išleidimo valdymui internetinėms programoms. Pati metodika yra paremta debesų kompiuterijos paslaugos „EaaS“ principu, kai visa IT infrastruktūra yra sukonfigūruota iš anksto ir kiekvienam scenarijui, kai reikalingos laikinosios aplinkos, nebereikia rūpintis kaip debesų serveriuose programa bus paruošta naudojimui. Strategija išsiskiria tuo, kad yra priešingybė tradicinėms statinėms aplinkoms, nes veikia emferiškai, dinamiškai prisitaiko prie kodo pakeitimų. Taip pat, jos integravimas turi ir nemažu iššūkių, tokių kaip automatizacija, duomenų surinkimas ir atitiktų produkcinės aplinkos scenarijų. Tačiau norint suvokti šio metodo įtaką, šiame darbe svarbu integruoti laikinąsias aplinkas, kadangi nėra daug apibrėžiančių empirinių tyrimų, kaip tai tinkamai padaryti.
 
 
 %  3 dalis. Praktinė dalis
 \section{Laikinųjų aplinkų sprendimo integracija}
 
-Siekiama įvykdyti laikinųjų aplinkų integraciją į pavyzdinį projektą, kurio kodas imituoja realios internetinės svetainės veikimą. Todėl bus naudojamas ir serverio pusės (angl. \textit{server-side}), ir į ją besikreipiančios vartotojo sąsajos programos, kad sukurti realų scenarijų. Pačiai laikinųjų aplinkų integracijai buvo pasirinktas rekomenduojamas įrankis pagal „Uffizzi“ produkto tyrimą, kuris buvo atliktas 2022 metais \cite{SaltDvyliktas}. Ši įmonė siūlo „EaaS“ tipo įrankį ir dokumentaciją, turinčią reikalingą informaciją apie integravimą. Jos tikslas yra parodyti, kad internetinėms svetainėms sprendimas veikia tinkamai ir kad nėra reikalinga jokia papildoma konfigūracija su kiekviena nauja kodo sujungimo užklausa. Visi automatizuoti procesai, konfigūracijos bei programinis kodas yra laikomas „GitHub“ platformoje.
+Siekiama įvykdyti laikinųjų aplinkų integraciją į pavyzdinį projektą, kurio kodas imituoja realios internetinės svetainės veikimą. Todėl bus naudojamas ir serverio pusės (angl. \textit{server-side}), ir į ją besikreipiančios vartotojo sąsajos programos, kad būtų galima sukurti realų scenarijų. Pačiai laikinųjų aplinkų integracijai buvo pasirinktas rekomenduojamas įrankis pagal „Uffizzi“ produkto tyrimą, kuris buvo atliktas 2022 metais \cite{SaltDvyliktas}. Ši įmonė siūlo „EaaS“ tipo įrankį ir dokumentaciją, turinčią reikalingą informaciją apie integravimą. Jos tikslas yra parodyti, kad internetinėms svetainėms sprendimas veikia tinkamai ir kad nėra reikalinga jokia papildoma konfigūracija su kiekviena nauja kodo sujungimo užklausa. Visi automatizuoti procesai, konfigūracijos bei programinis kodas yra laikomas „GitHub“ platformoje.
 
-\subsection{Pavyzdinis svetainės kodas}
+\subsection{Pavyzdinė svetainės programa}
 
-Imituoti realios internetinės programos veikimui bus reikalingi du komponentai - serveris ir vartotojo sąsajos programa. Abiems naudoti pasirinkta „JavaScript“ programavimo kalba dėl savo paprastumo bei mažo kompleksiškumo, taip pat kliento aplikacijai reikalinga ir standartinė HTML  kompiuterinė žymėjimo kalba (žr. \hyperref[priedas1]{1} ir \hyperref[priedas2]{2} priedus). Svetainės veikimo principas bus toks: registruojamas kiekvienas mygtuko paspaudimas siunčiant į serverį per jungtį (angl. \textit{socket}) bei tiesiogiai atvaizduojama kiek tokių paspaudimų jau buvo.
+Imituoti realios internetinės programos veikimui buvo panaudoti du reikalingi komponentai - serveris ir vartotojo sąsajos programa. Abiems naudoti pasirinkta „JavaScript“ programavimo kalba dėl savo paprastumo bei mažo kompleksiškumo, taip pat kliento aplikacijai reikalinga ir standartinė HTML  kompiuterinė žymėjimo kalba (žr. \hyperref[priedas1]{1} ir \hyperref[priedas2]{2} priedus). Svetainės veikimo principas bus toks: registruojamas kiekvienas mygtuko paspaudimas siunčiant į serverį per jungtį (angl. \textit{socket}) bei tiesiogiai atvaizduojama kiek tokių paspaudimų jau buvo.
 
 \begin{figure}[H]
     \centering
@@ -313,9 +319,9 @@ Imituoti realios internetinės programos veikimui bus reikalingi du komponentai 
 Aplikacijai sėkmingai veikiant reikia paruošti konteinerizuotas programas, kad programinė įranga veiktų vienodai, nepaisant to, kokiame serveryje šis kodas bus įdiegtas. Tai įgyvendintų pagrindinę sąlygą, kurią reikia išpildyti, siekiant turėti produkcinį programos variantą. „Docker“ platforma leidžia paruošti tokio tipo atvaizdus (angl. \textit{images}). Tiek serverio, tiek kliento pusės kodas yra ruošiamas ta pačia veiksmų seka, kuri aprašoma „Dockerfile“ tipo faile (žr. \hyperref[priedas3]{3 priedą}):
 
 \begin{enumerate}
-  \item Importuojamas oficialus „Node“ 16 versijos atvaizdas.
+  \item Importuojamas oficialus „Node“ versijos atvaizdas.
   \item Pasirenkama darbo direktorija kuriamame atvaizde.
-  \item Įklijuojami konfigūracijos failai, kurie aprašo kokie paketai yra reikalingi.
+  \item Įklijuojami konfigūracijos failai, kurie aprašo, kokie paketai yra reikalingi.
   \item Įrašomi reikalingi paketai pagal konfigūraciją.
   \item Įklijuojamas likęs programinis kodas.
   \item Nurodoma atvaizdo paleidimo metu naudojama komanda, kuri pradeda vykdyti programinį kodą.
@@ -332,7 +338,7 @@ Su parašytu kodu bei paruoštomis konteinerių konfigūracijomis, ši programa 
 „Uffizzi“ įrankis įvertinant skirtingus įmonių poreikius suteikia du skirtingus būdus integruoti savo produktą \cite{SaltKeturioliktas}:
 
 \begin{itemize}
-  \item \textit{Integracija su „Github Actions“}. Šis sprendimas yra naudojamas, kai programinė įranga jau iš seniau turi savo paruoštą išleidimo valdymą bei automatinius „Github Actions“ procesus, kurie ruošia „Docker“ atvaizdus bei juos talpina į atitinkamus registrus. Tokiu atveju nėra atsisakoma šių procesų, o tik pridedami papildomi žingsniai integruojant „Uffizzi“ įrankį.
+  \item \textit{Integracija su „Github Actions“}. Šis sprendimas yra naudojamas, kai programinė įranga jau iš seniau turi savo paruoštą išleidimo valdymą bei automatinius „Github Actions“ procesus, kurie ruošia „Docker“ atvaizdus bei juos talpina į atitinkamus registrus. Tokiu atveju nėra atsisakoma šių procesų, o tik pridedami papildomi žingsniai (tokie kaip konteinerių paruošimas, pranešimas įrankiui apie naują užklausą) integruojant „Uffizzi“ įrankį.
 
   \item \textit{Integracija su „Uffizzi CI“}. Produktui neturint jokio suformuoto išleidimo valdymo yra rekomenduojama naudoti šį būdą. Taip išvengiama automatizuotų procesų apsirašymo patiems „DevOps“ inžinieriams ir yra reikalinga tik „Docker Compose“ tipo konfigūracija, kuri apibrėžia mūsų programos komponentų poreikius.
 
@@ -343,7 +349,7 @@ Kadangi šio darbo imitacinė interneto svetainė dar neturi įgyvendintų autom
 
     \subsubsection{Konfigūracija ir pasiruošimas integracijai}
 
-Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda iš reikalingų atvaizdų paruošimo parametrų bei nustatymų apie laikinųjų aplinkų gyvavimo ciklą ir trukmę \cite{SaltKeturioliktas}. Pagal parašytą programinį kodą (žr. \hyperref[priedas1]{1} ir \hyperref[priedas2]{2} priedus) - nėra reikalingi jokie aplinkų kintamieji (angl. \textit{environment variables}), tik nurodytas reikalingas prievadas (angl. \textit{port}) bei kur rasti „Dockerfile“ tipo failą kiekvienam iš komponentų. Po to yra nurodomi laikinųjų aplinkų parametrai:
+Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda iš reikalingų atvaizdų paruošimo parametrų bei nustatymų apie laikinųjų aplinkų gyvavimo ciklą ir trukmę \cite{SaltKeturioliktas}. Pagal parašytą programinį kodą (žr. \hyperref[priedas1]{1} ir \hyperref[priedas2]{2} priedus) - nėra reikalingi jokie aplinkų kintamieji (angl. \textit{environment variables}), tik nurodytas reikalingas prievadas (angl. \textit{port}) bei nuoroda kur rasti „Dockerfile“ tipo failą kiekvienam iš komponentų. Po to yra nurodomi laikinųjų aplinkų parametrai:
 
 \begin{itemize}
   \item Diegti laikinąją aplinką, kai kodo sujungimo užklausa atidaroma - laikinoji aplinka automatiškai paruošiama.
@@ -354,7 +360,7 @@ Esminė konfigūracijos dalis - „Docker Compose“ tipo failas, kuris susideda
   
 \end{itemize}
 
-Tačiau „Uffizzi“ sprendimas suteikia tik vieną internetinės svetainės subdomeną visai aplinkai, ko pasekoje yra reikalingas apkrovos išlygintuvas (angl. \textit{load balancer}), kuris pagal užklausą nukreipia į atitinkamą komponentą - arba kliento pusės aplikaciją, arba serverį. Panaudojus populiaraus apkrovos išlygintuvo įrankio „Nginx“ oficialų „Docker“ atvaizdą paruošiamas „Dockerfile“, kuriame įkeliama konfigūracija apibrėžianti kur kokios užklausos turėtų būti nukreipiamos (žr. \hyperref[priedas5]{5 priedą}). Visi kreipimaisi į jungties serverį bus nukreipiami į serverį, o likę į kliento pusės programą.
+Tačiau „Uffizzi“ sprendimas suteikia tik vieną internetinės svetainės subdomeną visai aplinkai, ko pasekoje yra reikalingas apkrovos išlygintuvas (angl. \textit{load balancer}), kuris pagal užklausą nukreipia į atitinkamą komponentą - arba kliento pusės aplikaciją, arba serverį. Panaudojus populiaraus apkrovos išlygintuvo įrankio „Nginx“ oficialų „Docker“ atvaizdą paruošiamas „Dockerfile“, kuriame įkeliama konfigūracija apibrėžianti, kur kokios užklausos turėtų būti nukreipiamos (žr. \hyperref[priedas5]{5 priedą}). Visi kreipimaisi į jungties serverį bus nukreipiami į serverį, o likę į kliento pusės programą.
 
 \begin{figure}[H]
     \centering
@@ -367,20 +373,18 @@ Galiausiai darbe grįžtasma prie pagrindinės konfigūracijos. Pridedamas apkro
 
     \subsubsection{„Uffizzi CI“ prijungimas}
 
-Įvardinus mūsų programinės įrangos poreikius laikinosiose aplinkose, belieka tik duoti leidimą „Uffizzi CI“ įrankiui priėjimą prie produkto repozitorijos bei pateikti „Docker Compose“ konfigūracijos failo vietą. Sulig šiais veiksmais ne ilgiau nei po 5 minuičų kiekviena kodo sujungimo užklausa gauna nuorodą į veikiančią laikinąją aplinką (žr. \hyperref[priedas6]{6 priedą}). Taip pat, suteikiama galimybė per „Uffizzi CI“ platformą stebėti kiekvieno atvaizdo žurnalus (angl. \textit{logs}), stebėti kiekvieno komponento būseną ir klaidas, jei tokios nutiko. Visa tai įmanoma dėl prižiūrėtų automatinių procesų ir „EaaS“ metodikos, kuri suteikia reikiamą IT infrastruktūrą be jokių papildomų inžinierių pastangų.
+Įvardinus mūsų programinės įrangos poreikius laikinosiose aplinkose, belieka tik duoti leidimą „Uffizzi CI“ įrankiui priėjimą prie produkto repozitorijos bei pateikti „Docker Compose“ konfigūracijos failo vietą. Sulig šiais veiksmais ne ilgiau nei po 5 minuičų kiekviena kodo sujungimo užklausa gauna nuorodą į veikiančią laikinąją aplinką (žr. \hyperref[priedas6]{6 priedą}). Taip pat, suteikiama galimybė per „Uffizzi CI“ platformą stebėti kiekvieno atvaizdo žurnalus (angl. \textit{logs}), stebėti kiekvieno komponento būseną ir klaidas, jei tokios nutiko. Visa tai įmanoma dėl suderintų automatinių procesų ir „EaaS“ metodikos, kuri suteikia reikiamą IT infrastruktūrą be jokių papildomų inžinierių pastangų ją konfiguruojant.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.55]{img/Veikimas.png}
+    \includegraphics[scale=0.28]{img/UffizziFixed.png}
     \caption{Įgyvendinto „Uffizzi CI“ laikinųjų aplinkų sprendimo schema}
     \label{img:mlp}
 \end{figure}
 
 \subsection{Apibendrinimas}
 
-Imituotai internetinei programai pavyko pritaikyti vieną iš rekomenduojamų laikinųjų aplinkų sprendimą, kuris nereikalavo iš anksto paruošto programinės įrangos išleidimo su registrais paruoštiems atvaizdams. Kodo sujungimo užklausos tapo paprasčiau peržiūrimos, nes nėra reikalingi rankiniai žingsniai tam pasiekti. Taip pat įrankis suteikė „DevOps“ inžinieriams patogų valdymo pultą, skirta stebėti bei valdyti šiuo metu veikiančias laikinąsias aplinkas. Tačiau netgi ir jau iš anksčiau naudojant tradicinį programinės įrangos išleidimo valdymą, šį sprendimą būtų galima pritaikyti pagal poreikius, nes konfigūracija suteikia pakankamai parametrų tiems dalykams apibrėžti.
-
-% TODO: Sutvarkius visus kitus punktus, skirti laiko pagal dėstytojo komentarus perdaryti šitą skyrių
+Imituotai internetinei programai pavyko pritaikyti vieną iš rekomenduojamų laikinųjų aplinkų sprendimą, kuris nereikalavo iš anksto paruošto programinės įrangos išleidimo su registrais paruoštiems atvaizdams. Kodo sujungimo užklausos tapo paprasčiau peržiūrimos, nes nėra reikalingi rankiniai žingsniai tam pasiekti. Taip pat įrankis gali suteikti „DevOps“ inžinieriams patogų valdymo pultą, skirta stebėti bei valdyti šiuo metu veikiančias laikinąsias aplinkas. Tačiau netgi ir jau iš anksčiau naudojant tradicinį programinės įrangos išleidimo valdymą, šį sprendimą būtų galima pritaikyti pagal poreikius, nes konfigūracija suteikia pakankamai parametrų tai padaryti.
 
 \sectionnonum{Rezultatai ir išvados}
 
@@ -394,34 +398,34 @@ Darbo metodu pasiekti \textbf{rezultatai}:
       \item Apibrėžta „DevOps“ pozicijos ir automatizacijos svarba siekiant efektyvių leidimų.
       \item Paaiškintos skirtingos „Git“ šakojimosi strategijos leidimų valdyme.
     \end{itemize}
-  \item Apžvelgtas laikinųjų aplinkų sprendimas internetinėms programoms, jo taikymo būdai bei egzistuojančios problemos.
+  \item Apžvelgtas laikinųjų aplinkų sprendimas internetinių programų išleidimo valdyme, jo taikymo būdai bei savybės.
     \begin{itemize}
       \item Apibrėžta debesų kompiuterijos paslauga „EaaS“ ir jos panaudojimas su laikinosiomis aplinkomis.
-      \item Palygintos laikinosios ir statinės aplinkos, įvardinant skirtumus.
+      \item Palygintos laikinosios ir statinės aplinkos, įvardinant skirtumus bei laikinųjų aplinkų pranašumus.
       \item Praplėstos „Git“ šakojimosi strategijos integruojant ir laikinąsias aplinkas.
       \item Aprašyti galimi skirtingi laikinųjų aplinkų integracijos būdai pagal produkto poreikius.
     \end{itemize}
-  \item Integruotas vienas iš laikinųjų aplinkų sprendimų į programinės įrangos išleidimo valdymą.
+  \item Integruotas vienas iš laikinųjų aplinkų sprendimų į programinės įrangos išleidimo valdymą siekiant įvertinti rekomenduojamą sprendimą.
     \begin{itemize}
       \item Suprojektuotas ir suprogramuotas pavyzdinis svetainės kodas.
-      \item Imitacinė internetinė svetainė buvo paruošta programinės įrangos leidimams „Docker“ platformos pagalba. 
+      \item Imitacinė internetinė svetainė buvo paruošta programinės įrangos leidimams ją konteinerizuojant. 
       \item Pasirinktas integracijos tipas bei paruošta konfigūracija peržiūros aplinkom įgyvendinti.
       \item Sėkmingai įjungtos bei patestuotos laikinosios aplinkos su kiekviena nauja kodo sujungimo užklausa.
     \end{itemize}
 \end{enumerate}
 
+\bigskip
 Darbo metodu padarytos \textbf{išvados}:
 
 \begin{enumerate}
-  \item Tradiciniai programinės įrangos išleidimo valdymo metodai užtikrina reikiamą saugumą ar greitį, tačiau susiduriama su problemomis, kai pasirinkus saugesnį metodą nukenčia greitis, o pasirinkus greitį, nukenčia saugumas.
-  \item Laikinosios aplinkos keičia įmonėje vykdomų procesų eigą, nes kodo verifikacijos laikas yra daromas prieš suliejant kodą į statines aplinkas.
-  \item Laikinųjų aplinkų integracija reikalauja papildomų pastangų bei priežiūros, todėl jų suteikiama nauda nėra vienareikšmiškai tik teigiama.
-  \item Laikinosios aplinkos palengvina kodo peržiūros procesą, nes nėra reikalingi rankiniai žingsniai peržiūrėti veikiančią internetinę aplikaciją.
+  \item Tradiciniai programinės įrangos išleidimo valdymo metodai užtikrina reikiamą saugumą ar greitį, tačiau susiduria su problemomis, kai pasirinkus saugesnį metodą nukenčia greitis, o pasirinkus greitį, nukenčia saugumas. Laikinosios aplinkos leidžia tai išspręsti papildant ar pakeičiant išleidimo valdymo komponentus.
+  \item Laikinųjų aplinkų naudojimas reikalauja nemažų „DevOps“ inžinieriaus laiko resursų, todėl kiekvienai komandai norint įtraukti laikinąsias aplinkas yra reikalingas atskiras įvertinimas dėl šio tipo aplinkų poreikio.
+  \item Laikinosios aplinkos palengvina kodo sujungimo užklausų peržiūros procesą bei testavimą, kadangi aplinka izoliuota ir nėra reikalingi rankiniai žingsniai peržiūrėti veikiančią internetinę programą kiekvieną kartą.
 \end{enumerate} 
 
 \sectionnonum{Tolimesni darbai}
  
-Siūloma dėl empirinių tyrimų trūkumo šiai temai atlikti tyrimą, kuris apibrėžtų pagrindines problemas pasirinkus šią strategiją, kokie taikymo būdai veikia geriausiai ir nustatytų kokybės bei kaštų santykį. Taip pat, svarbu šią programinės įrangos išleidimo metodiką nagrinėti toliau su labiau kompleksinėm architektūrom, kurios įtrauktų mikroservisus, duomenų bazes, vidinius tinklus ir kitas aplinkybės, apsunkinančiais laikinųjų aplinkų integraciją.
+Siūloma dėl empirinių tyrimų trūkumo šiai temai atlikti tyrimą, kuris apibrėžtų kurie taikymo būdai veikia geriausiai ir nustatytų kokybės bei kaštų santykį. Taip pat, svarbu šią programinės įrangos išleidimo metodiką nagrinėti toliau su labiau kompleksinėm architektūrom, kurios įtrauktų mikroservisus, duomenų bazes, vidinius tinklus ir kitas aplinkybės, apsunkinančiais laikinųjų aplinkų integraciją.
 
 \printbibliography[heading=bibintoc,category=cited] % Šaltinių sąraše nurodoma panaudota
 % literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų
